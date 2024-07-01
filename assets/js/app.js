@@ -289,14 +289,20 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     var slider_service_section = $('.medicx-slider-service-section');
     if (slider_service_section.is_exist()) {
       slider_service_section.slick({
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 8000,
+        speed: 12000,
         arrows: false,
         pauseOnHover: false,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        responsive: [{
+          breakpoint: 1399,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
       });
     }
 
