@@ -1,9 +1,5 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 (function ($) {
   "use strict";
 
@@ -52,6 +48,18 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         $('#sticky-menu').removeClass('sticky-menu');
       }
     });
+    var hero_slider = $('.medicx-hero-slider-init');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        infinite: true,
+        prevArrow: '<button class="slide-arrow medicx-hero-next"></button>',
+        nextArrow: '<button class="slide-arrow medicx-hero-prev"></button>'
+      });
+    }
 
     /*--------------------------------------------------------------
     medicx COUNTER JS INIT
@@ -84,48 +92,16 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }
       });
     }
-    /*--------------------------------------------------------------
-    medicx BRAND SLIDER JS INIT
-    --------------------------------------------------------------*/
-    var brand_slider = $('.medicx-brand-slider');
-    if (brand_slider.is_exist()) {
-      brand_slider.slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
 
     /*--------------------------------------------------------------
     medicx TESTIMONIAL SLIDER JS INIT
     --------------------------------------------------------------*/
-    var t_slider = $('.medicx-testimonial-slider');
+    var t_slider = $('.medicx-testimonial-slider-init');
     if (t_slider.is_exist()) {
       t_slider.slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
         arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
         responsive: [{
           breakpoint: 1349,
           settings: {
@@ -212,113 +188,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }]
       });
     }
-    /*--------------------------------------------------------------
-    medicx INTEGRATION IMAGES SLIDER JS INIT
-    --------------------------------------------------------------*/
-    var integration_slider_icon_data = $('.medicx-integration-slider-icon-data');
-    if (integration_slider_icon_data.is_exist()) {
-      integration_slider_icon_data.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
-    var integration_slider_icon_data_wrap = $('.medicx-integration-slider-icon-data-wrap');
-    if (integration_slider_icon_data_wrap.is_exist()) {
-      integration_slider_icon_data_wrap.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        rtl: true,
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
 
-    // medicx SERVICE SLIDER SECTION JS INIT
-    var slider_service_section = $('.medicx-slider-service-section');
-    if (slider_service_section.is_exist()) {
-      slider_service_section.slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 12000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
-
-    //  medicx-testimonial-2column-sliderv5
-    var testimonial_2column_sliderv5 = $('.medicx-testimonial-2column-sliderv5');
-    if (testimonial_2column_sliderv5.is_exist()) {
-      testimonial_2column_sliderv5.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: true,
-        infinite: true,
-        prevArrow: '<button class="slide-arrow medicx-t-next"></button>',
-        nextArrow: '<button class="slide-arrow medicx-t-prev"></button>'
-      });
-    }
     /*--------------------------------------------------------------
     medicx MAGNIFIC POPUP JS INIT
     ------------------------------------------------------------*/
@@ -329,58 +199,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         mainClass: 'mfp-fade'
       });
     }
-
-    // testimonial slider
-
-    $('.medicx-testimonial-2column-slider').slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      fade: false,
-      adaptiveHeight: true,
-      infinite: false,
-      useTransform: true,
-      speed: 400
-    }, "infinite", true), "cssEase", 'cubic-bezier(0.77, 0, 0.18, 1)'), "prevArrow", '<button class="slide-arrow medicx-t-next"></button>'), "nextArrow", '<button class="slide-arrow medicx-t-prev"></button>'));
-    $('.medicx-testimonial-slider-nav').on('init', function (event, slick) {
-      $('.medicx-testimonial-slider-nav .slick-slide.slick-current').addClass('is-active');
-    }).slick({
-      slidesToShow: 7,
-      slidesToScroll: 7,
-      dots: false,
-      focusOnSelect: false,
-      infinite: false,
-      responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5
-        }
-      }, {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
-        }
-      }, {
-        breakpoint: 420,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      }]
-    });
-    $('.medicx-testimonial-2column-slider').on('afterChange', function (event, slick, currentSlide) {
-      $('.medicx-testimonial-slider-nav').slick('slickGoTo', currentSlide);
-      var currrentNavSlideElem = '.medicx-testimonial-slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-      $('.medicx-testimonial-slider-nav .slick-slide.is-active').removeClass('is-active');
-      $(currrentNavSlideElem).addClass('is-active');
-    });
-    $('.medicx-testimonial-slider-nav').on('click', '.slick-slide', function (event) {
-      event.preventDefault();
-      var goToSingleSlide = $(this).data('slick-index');
-      $('.medicx-testimonial-2column-slider').slick('slickGoTo', goToSingleSlide);
-    });
   }); /*End document ready*/
 
   $(window).on("resize", function () {}); // end window resize
