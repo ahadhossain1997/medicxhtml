@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="assets/css/custom-font.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/aos.css">
@@ -70,9 +70,9 @@
         <div class="medicx-header-info-wrap">
           <div class="medicx-header-info-data">
             <ul>
-              <li><a href="#"><img src="assets/images/v1/call.png" alt="">(808) 555-0111-8765</a></li>
-              <li><a href="#"><img src="assets/images/v1/Email.png" alt="">medicx@gmail.com</a></li>
-              <li><a href="#"><img src="assets/images/v1/location.png" alt="">31 Richardson, California</a></li>
+              <li><a href="tel:808"><img src="assets/images/v1/call.png" alt="">(808) 555-0111-8765</a></li>
+              <li><a href="mailto:name@email.com"><img src="assets/images/v1/Email.png" alt="">medicx@gmail.com</a></li>
+              <li><img src="assets/images/v1/location.png" alt="">31 Richardson, California</li>
             </ul>
           </div>
           <div class="medicx-social-icon-wrap">
@@ -349,41 +349,56 @@
   <!--End landex-header-section -->
 
   <section class="medicx-hero-section">
-    <div class="medicx-hero-slider-init">
+    <div class="medicx-hero-slider-init global-carousel">
       <div class="medicx-hero-item" style="background-image: url(assets/images/v1/herothumb.png);">
         <div class="container">
           <div class="medicx-hero-slider-content light-color">
-            <h1>The healthcare center that you can trust</h1>
-            <p>We always help to provide proper treatment for all of get the proper cure and healthy life. We are dedicated to providing exceptional medical care.</p>
+            <h1 class="slider-custom-anim-left slider-animated" data-ani=" slider-animated" data-ani-delay="0.1s">The healthcare center that you can trust</h1>
+            <p class="slider-custom-anim-left slider-animated" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We always help to provide proper treatment for all of get the proper cure and healthy life. We are dedicated to providing exceptional medical care.</p>
           </div>
-          <div class="medicx-hero-btn-wrap medicx-hero5-btn extra-mt">
-            <a class="medicx-default-btn pill wow fadeInUp" data-wow-delay=".02s" data-text="Browse Our Services" href="contact-us.html">
+          <div class="medicx-hero-btn-wrap extra-mt animated" data-animation-in="fadeInUp">
+            <a class="medicx-default-btn pill" data-text="Browse Our Services" href="contact-us.html">
               <span class="button-wraper">Browse Our Services</span>
             </a>
-            <a class="medicx-default-btn pill outline-btn wow fadeInUpX" data-wow-delay="0.4s" data-text="Our Specialities" href="service.html">
+            <a class="medicx-default-btn pill outline-btn" data-text="Our Specialities" href="service.html">
               <span class="button-wraper">Our Specialities</span>
             </a>
           </div>
         </div>
       </div>
-      <div class="medicx-hero-item" style="background-image: url(assets/images/v1/herothumb.png);">
+      <div class="medicx-hero-item" style="background-image: url(assets/images/v1/herothumb2.png);">
         <div class="container">
           <div class="medicx-hero-slider-content light-color">
-            <h1>The healthcare center that you can trust</h1>
-            <p>We always help to provide proper treatment for all of get the proper cure and healthy life. We are dedicated to providing exceptional medical care.</p>
+            <h1 data-ani="slider-custom-anim-left" data-ani-delay="0.1s">We make your smile more beautiful</h1>
+            <p data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We always help to provide proper treatment for all of get the proper cure and healthy life. We are dedicated to providing exceptional medical care.</p>
           </div>
-          <div class="medicx-hero-btn-wrap medicx-hero5-btn extra-mt">
-            <a class="medicx-default-btn pill wow fadeInUp" data-wow-delay=".02s" data-text="Browse Our Services" href="contact-us.html">
+          <div class="medicx-hero-btn-wrap medicx-hero5-btn extra-mt animated" data-animation-in="fadeInUp">
+            <a class="medicx-default-btn pill" data-text="Browse Our Services" href="contact-us.html">
               <span class="button-wraper">Browse Our Services</span>
             </a>
-            <a class="medicx-default-btn pill outline-btn wow fadeInUpX" data-wow-delay="0.4s" data-text="Our Specialities" href="service.html">
+            <a class="medicx-default-btn pill outline-btn" data-text="Our Specialities" href="service.html">
+              <span class="button-wraper">Our Specialities</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="medicx-hero-item" style="background-image: url(assets/images/v1/herothumb3.png);">
+        <div class="container">
+          <div class="medicx-hero-slider-content light-color">
+            <h1 data-ani="slider-custom-anim-left" data-ani-delay="0.1s">We're the best in town for eye care services</h1>
+            <p data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We always help to provide proper treatment for all of get the proper cure and healthy life. We are dedicated to providing exceptional medical care.</p>
+          </div>
+          <div class="medicx-hero-btn-wrap medicx-hero5-btn extra-mt animated" data-animation-in="fadeInUp">
+            <a class="medicx-default-btn pill" data-text="Browse Our Services" href="contact-us.html">
+              <span class="button-wraper">Browse Our Services</span>
+            </a>
+            <a class="medicx-default-btn pill outline-btn" data-text="Our Specialities" href="service.html">
               <span class="button-wraper">Our Specialities</span>
             </a>
           </div>
         </div>
       </div>
     </div>
-
   </section>
   <!-- end hero -->
   <div class="medicx-section-padding">
@@ -392,7 +407,7 @@
         <h2>Our hospital has all extensive facilities</h2>
       </div>
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-xl-4 col-md-6">
           <div class="medicx-features-wrapper wow fadeInUpX" data-wow-delay="0.1s">
             <div class="medicx-features-icon">
               <img src="assets/images/v1/icon1.png" alt="">
@@ -403,7 +418,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-xl-4 col-md-6">
           <div class="medicx-features-wrapper wow fadeInUpX" data-wow-delay="0.2s">
             <div class="medicx-features-icon">
               <img src="assets/images/v1/icon3.png" alt="">
@@ -414,7 +429,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-xl-4 col-md-6">
           <div class="medicx-features-wrapper wow fadeInUpX" data-wow-delay="0.3s">
             <div class="medicx-features-icon">
               <img src="assets/images/v1/icon2.png" alt="">
@@ -428,6 +443,13 @@
       </div>
     </div>
   </div>
+  <!-- End section -->
+
+  <div class="container">
+    <div class="medicx-divider"></div>
+  </div>
+  <!-- End section -->
+
   <!-- end features -->
   <section class="medicx-section-padding2">
     <div class="container">
@@ -464,27 +486,30 @@
       </div>
     </div>
   </section>
+  <!-- End section -->
+
   <!-- end content section -->
-  <div class="medicx-section-padding2">
+  <div class="medicx-section-padding3">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 order-lg-2">
           <div class="medicx-content-thumb2 position-ralatiove wow fadeInRight">
             <img src="assets/images/v1/content-thumb2.png" alt="">
-            <div class="medicx-video-btn wow fadeInUpX">
-              <a class="medicx-popup-video2 video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY">
-                <img src="assets/images/v1/playbtn.png" alt="">
-              </a>
-            </div>
+            <a class="medicx-popup-video video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY">
+              <img src="assets/images/v1/playbtn.png" alt="">
+              <div class="waves wave-1"></div>
+              <div class="waves wave-2"></div>
+              <div class="waves wave-3"></div>
+            </a>
           </div>
         </div>
         <div class="col-lg-7">
-          <div class="medicx-default-content mr-80 tac">
+          <div class="medicx-default-content mr-80">
             <div class="tg-heading-subheading animation-style3">
-              <h2>We are the best for your healthcare!</h2>
+              <h2 class="tac">We are the best for your healthcare!</h2>
             </div>
-            <p>We prioritize the well-being of our patients above all else. Our team of dedicated healthcare professionals is committed to providing</p>
-            <div class="extra-mt">
+            <p class="tac">We prioritize the well-being of our patients above all else. Our team of dedicated healthcare professionals is committed to providing</p>
+            <div class="extra-mt mr-180">
               <div class="medicx-iconbox-wrap2">
                 <div class="medicx-iconbox-data2">
                   <h4>Patient-Centered Care:</h4>
@@ -504,7 +529,7 @@
     </div>
   </div>
   <!-- end content2 section -->
-  <section class="medicx-fact-section">
+  <section class="medicx-faq-section">
     <div class="container">
       <div class="row">
         <div id="medicx-counter"></div>
@@ -535,7 +560,7 @@
       </div>
     </div>
   </section>
-  <!-- end fact -->
+  <!-- end faq -->
   <div class="medicx-section-padding4 servicev1 dark-bg">
     <div class="container">
       <div class="medicx-section-title center max-width-large3">
@@ -553,7 +578,7 @@
             <div class="medicx-iconbox-data">
               <h4>Orthopedic Surgery</h4>
               <p>It is a branch of medicines the diagnosis & surgical treatment of injuries..</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -573,7 +598,7 @@
             <div class="medicx-iconbox-data">
               <h4>Maternity Care</h4>
               <p>It involves support provided to mothers before, during, after childbirth.</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -592,7 +617,7 @@
             <div class="medicx-iconbox-data">
               <h4>Urology Services</h4>
               <p>It encompass medical care & treatments focused on the diagnosis management.</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -604,7 +629,7 @@
         <div class="col-lg-4">
           <div class="medicx-iconbox-wrap wow fadeInUpX" data-wow-delay="0.1s">
             <div class="medicx-iconbox-icon">
-              <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="icon-stroke" width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_3008_966" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="51">
                   <path d="M0 0.5H50V50.5H0V0.5Z" fill="white" />
                 </mask>
@@ -617,7 +642,7 @@
             <div class="medicx-iconbox-data">
               <h4>Heart Surgery</h4>
               <p>It particularly procedures coronary artery bypass grafting replacement & accurate.</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -629,7 +654,7 @@
         <div class="col-lg-4">
           <div class="medicx-iconbox-wrap wow fadeInUpX" data-wow-delay="0.1s">
             <div class="medicx-iconbox-icon">
-              <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="icon-stroke" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.2988 21.1992H23.0997" stroke="white" stroke-width="3" stroke-miterlimit="10" />
                 <path d="M25.8994 26.8008H28.7002" stroke="white" stroke-width="3" stroke-miterlimit="10" />
                 <path d="M36.3572 24C36.3572 22.6787 35.4419 21.5717 34.211 21.2769C33.9923 20.4954 33.6816 19.7526 33.2917 19.0602C33.9544 17.9811 33.8191 16.5506 32.8845 15.6159C31.9499 14.6813 30.5193 14.546 29.4402 15.2087C28.7479 14.8188 28.005 14.5081 27.2236 14.2895C26.9287 13.0585 25.8217 12.1432 24.5004 12.1432C23.1791 12.1432 22.0721 13.0585 21.7772 14.2895C20.9958 14.5081 20.2529 14.8188 19.5606 15.2087C18.4815 14.546 17.0509 14.6813 16.1163 15.6159C15.1817 16.5506 15.0464 17.9811 15.7091 19.0602C15.3192 19.7526 15.0085 20.4954 14.7898 21.2769C13.5589 21.5717 12.6436 22.6787 12.6436 24C12.6436 25.3214 13.5589 26.4284 14.7898 26.7232C15.0085 27.5046 15.3192 28.2475 15.7091 28.9399C15.0464 30.0189 15.1817 31.4495 16.1163 32.3841C17.0509 33.3188 18.4815 33.454 19.5606 32.7914C20.2529 33.1812 20.9958 33.4919 21.7772 33.7106C22.0721 34.9416 23.1791 35.8569 24.5004 35.8569C25.8217 35.8569 26.9287 34.9416 27.2236 33.7106C28.005 33.4919 28.7479 33.1812 29.4402 32.7914C30.5193 33.454 31.9499 33.3188 32.8845 32.3841C33.8191 31.4495 33.9544 30.0189 33.2917 28.9399C33.6816 28.2475 33.9923 27.5046 34.211 26.7232C35.4419 26.4284 36.3572 25.3214 36.3572 24Z" stroke="white" stroke-width="3" stroke-miterlimit="10" />
@@ -654,7 +679,7 @@
             <div class="medicx-iconbox-data">
               <h4>Oncology Treatment</h4>
               <p>This encompasses medical aimed at diagnosing, and treating cancer.</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -673,7 +698,7 @@
             <div class="medicx-iconbox-data">
               <h4>Neurology Services</h4>
               <p>It involve the diagnosis of spinal cord disorders affecting the brain &muscles.</p>
-              <a class="medicx-icon-btn" href="single-service.html">
+              <a class="medicx-iconbox-btn" href="single-service.html">
                 Read More
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 1L19 8M19 8L12 15M19 8L1 8" stroke="#0022FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -796,7 +821,7 @@
     </div>
   </div>
   <!-- end team -->
-  <section class="medicx-section-padding">
+  <section class="medicx-section-padding5">
     <div class="container">
       <div class="medicx-section-title center">
         <div class="tg-heading-subheading animation-style3">
@@ -1246,57 +1271,47 @@
                 <div class="col-lg-12">
                   <div class="medicx-main-field">
                     <h6>Reason For Visit</h6>
-                    <div class="option-wrapper">
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Routine Checkup</p>
-                        </div>
+                    <form action="#">
+                      <div class="checkbox-wrapper">
+                        <p>
+                          <input type="radio" id="test1" name="radio-group" checked>
+                          <label for="test1">Routine Checkup</label>
+                        </p>
+                        <p>
+                          <input type="radio" id="test2" name="radio-group">
+                          <label for="test2">New Patient Visit</label>
+                        </p>
+                        <p>
+                          <input type="radio" id="test3" name="radio-group">
+                          <label for="test3">Specific Concern</label>
+                        </p>
                       </div>
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>New Patient Visit</p>
-                        </div>
-                      </div>
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Specific Concern</p>
-                        </div>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="medicx-main-field2">
-                    <h6>Department</h6>
-                    <div class="option-wrapper">
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Urology</p>
-                        </div>
+                  <div class="medicx-main-field mb-0-767">
+                    <h6>Reason For Visit</h6>
+                    <form action="#">
+                      <div class="checkbox-wrapper">
+                        <p>
+                          <input type="radio" id="test4" name="radio-group" checked>
+                          <label for="test4">Urology</label>
+                        </p>
+                        <p>
+                          <input type="radio" id="test5" name="radio-group">
+                          <label for="test5">Oncology </label>
+                        </p>
+                        <p>
+                          <input type="radio" id="test6" name="radio-group">
+                          <label for="test6">Orthopedic</label>
+                        </p>
+                        <p>
+                          <input type="radio" id="test7" name="radio-group">
+                          <label for="test7">Neurology</label>
+                        </p>
                       </div>
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Oncology</p>
-                        </div>
-                      </div>
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Orthopedic</p>
-                        </div>
-                      </div>
-                      <div class="option-wrap">
-                        <div class="dot"></div>
-                        <div class="data">
-                          <p>Neurology</p>
-                        </div>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <div class="medicx-title-btn wow fadeInUpX">
@@ -1315,6 +1330,8 @@
 
 
 
+
+
   <footer class="medicx-footer-section dark-bg">
     <div class="container">
       <div class="medicx-footer-top">
@@ -1323,7 +1340,7 @@
             <div class="medicx-footer-wrap mr-25 light-color">
               <a href="index.html"><img class="footer1-img" src="assets/images/logo/logo-white.png" alt=""></a>
               <p>Medicx Hospital offers a wide range of medical services, utilizing cutting-edge technology of healthcare experts to deliver patient care and treatment.</p>
-              <div class="medicx-social-icon">
+              <div class="medicx-social-icon footer-1-social-icon">
                 <ul>
                   <li>
                     <a href="https://www.twitter.com/">
@@ -1415,6 +1432,7 @@
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/slick-animation.min.js"></script>
   <script src="assets/js/slick.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/modernizr.min.js"></script>
@@ -1425,7 +1443,8 @@
   <script src="assets/js/gsap.js"></script>
   <script src="assets/js/ScrollTrigger.js"></script>
   <script src="assets/js/SplitText.js"></script>
-  <script src="assets/js/gsap-animation.js"></script>
+  <script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
+
 
 
   <!-- <script src="assets/js/scrollsmooth.js"></script> -->
