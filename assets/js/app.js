@@ -48,6 +48,13 @@
         $('#sticky-menu').removeClass('sticky-menu');
       }
     });
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 50) {
+        $('#sticky-menu2').addClass('sticky-menu2');
+      } else {
+        $('#sticky-menu2').removeClass('sticky-menu2');
+      }
+    });
 
     /*--------------------------------------------------------------
     medicx HERO SLIDER JS INIT
@@ -82,6 +89,18 @@
         lazyLoad: 'progressive',
         prevArrow: '<button class="slide-arrow medicx-hero-next"></button>',
         nextArrow: '<button class="slide-arrow medicx-hero-prev"></button>'
+      }).slickAnimation();
+    }
+    var hero_slider = $('.medicx-hero-slider-init2');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        lazyLoad: 'progressive'
       }).slickAnimation();
     }
 
@@ -151,31 +170,6 @@
     medicx TESTIMONIAL SLIDER 2 JS INIT
     --------------------------------------------------------------*/
 
-    var t_slider2 = $('.medicx-testimonial-slider-2');
-    if (t_slider2.is_exist()) {
-      t_slider2.slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
-        arrows: false,
-        pauseOnHover: false,
-        rtl: true,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1349,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
     // SOFAX SERVICE SLIDER SECTION JS INIT
     var slider_service_section = $('.medicx-slider-service-section');
     if (slider_service_section.is_exist()) {
