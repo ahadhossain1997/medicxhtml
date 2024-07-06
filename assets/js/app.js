@@ -165,6 +165,19 @@
         }]
       });
     }
+    var t_slider = $('.medicx-testimonialv2-slider-init');
+    if (t_slider.is_exist()) {
+      t_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        infinite: true,
+        lazyLoad: 'progressive',
+        prevArrow: '<button class="slide-arrow medicx-t-next"></button>',
+        nextArrow: '<button class="slide-arrow medicx-t-prev"></button>'
+      }).slickAnimation();
+    }
 
     /*--------------------------------------------------------------
     medicx TESTIMONIAL SLIDER 2 JS INIT
