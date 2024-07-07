@@ -103,7 +103,18 @@
         lazyLoad: 'progressive'
       }).slickAnimation();
     }
-
+    var hero_slider = $('.medicx-hero-slider-init3');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        lazyLoad: 'progressive'
+      }).slickAnimation();
+    }
     /*--------------------------------------------------------------
     medicx COUNTER JS INIT
     --------------------------------------------------------------*/
