@@ -189,6 +189,24 @@
         nextArrow: '<button class="slide-arrow medicx-t-prev"></button>'
       }).slickAnimation();
     }
+    var t_slider = $('.medicx-testimonial-slider-init3');
+    if (t_slider.is_exist()) {
+      t_slider.slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        lazyLoad: 'progressive',
+        responsive: [{
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
+      });
+    }
 
     /*--------------------------------------------------------------
     medicx TESTIMONIAL SLIDER 2 JS INIT
@@ -509,4 +527,6 @@
   // AOS.init({
   //   duration: 1200,
   // })
+  var currentYear = new Date().getFullYear();
+  $('#current-year').text(currentYear);
 })(jQuery);
