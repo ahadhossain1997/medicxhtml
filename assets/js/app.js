@@ -529,4 +529,42 @@
   // })
   var currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
+
+  // datepicker js init
+
+  jQuery(document).ready(function () {
+    jQuery('#datepicker').datepicker({
+      format: 'dd-mm-yyyy',
+      startDate: '+1d'
+    });
+  });
+  jQuery(document).ready(function () {
+    jQuery('#id_StartDate').datepicker({
+      dateFormat: 'yy/mm/dd',
+      startDate: '0d',
+      minDate: 0,
+      highlightWeek: true
+    });
+  });
+
+  // select option
+  var index = 1;
+  var on = function on(listener, query, fn) {
+    document.querySelectorAll(query).forEach(function (item) {
+      item.addEventListener(listener, function (el) {
+        fn(el);
+      });
+    });
+  };
+  on('click', '.selectBtn', function (item) {
+    var next = item.target.nextElementSibling;
+    next.classList.toggle('toggle');
+    next.style.zIndex = index++;
+  });
+  on('click', '.option', function (item) {
+    item.target.parentElement.classList.remove('toggle');
+    var parent = item.target.closest('.select').children[0];
+    parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+    parent.innerText = item.target.innerText;
+  });
 })(jQuery);

@@ -2787,20 +2787,27 @@ textarea::placeholder { /* Most modern browsers support this now. */
   }
 }
 
-@media (max-width: 991px) {
-  .medicx-main-field1 {
-    margin-bottom: 24px;
-  }
-}
-
 .medicx-main-field input {
   background: rgba(0, 34, 255, 0.0509803922);
   border: none !important;
 }
 
+.medicx-main-field1 {
+  position: relative;
+}
 .medicx-main-field1 input {
   background: rgba(0, 34, 255, 0.0509803922);
   border: none !important;
+}
+.medicx-main-field1 img {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+}
+@media (max-width: 991px) {
+  .medicx-main-field1 {
+    margin-bottom: 24px;
+  }
 }
 
 .medicx-subcribe-btn2 {
@@ -2864,6 +2871,207 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .medicx-main-field-wrap {
   display: flex;
   gap: 24px;
+}
+
+.ui-datepicker {
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.ui-datepicker-header {
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  background: var(--accent-color);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  width: 20px;
+  height: 20px;
+  text-indent: 9999px;
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  margin-left: 12px;
+}
+
+.ui-datepicker-prev:after {
+  transform: rotate(45deg);
+  margin: -43px 0px 0px 8px;
+}
+
+.ui-datepicker-next {
+  float: right;
+  margin-right: 12px;
+}
+
+.ui-datepicker-next:after {
+  transform: rotate(-135deg);
+  margin: -43px 0px 0px 6px;
+}
+
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover:after,
+.ui-datepicker-next:hover:after {
+  border-color: #333333;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+
+.ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 40px;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.ui-state-default {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.ui-state-default:hover {
+  color: #ffffff;
+  background: var(--accent-color);
+  border-radius: 50px;
+  transition: all 0.25s cubic-bezier(0.7, -0.12, 0.2, 1.12);
+}
+
+.ui-state-highlight {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+}
+
+.ui-state-active {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+  color: #eee;
+  border: 2px solid transparent;
+}
+
+.icon {
+  margin-left: -30px;
+  margin-top: -26px;
+  position: relative;
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 34, 255, 0.0509803922);
+  border: none !important;
+  border-radius: 50px;
+}
+
+.select .selectBtn {
+  padding: 15px 24px 15px 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select .selectBtn:after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 2px solid #414141;
+  border-bottom: 2px solid #414141;
+  transition: 0.2s ease;
+}
+
+.select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+
+.select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid #eee;
+  z-index: 1;
+  background: rgba(0, 34, 255, 0.0509803922);
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.select .selectDropdown .option {
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.select .selectDropdown .option:hover {
+  background: #f8f8f8;
+}
+
+.select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  margin-top: 5px;
 }
 
 .medicx-breadcrumb {
@@ -3838,37 +4046,6 @@ h1.post__title {
   font-weight: 700;
 }
 
-.team-member-content h6 {
-  color: var(--heading-color);
-}
-.team-member-content p {
-  font-size: 20px;
-}
-
-.p-130 {
-  padding: 130px 0;
-}
-@media (max-width: 991px) {
-  .p-130 {
-    padding: 90px 0;
-  }
-}
-@media (max-width: 767px) {
-  .p-130 {
-    padding: 60px 0;
-  }
-}
-
-.medicx-member-experience h4 {
-  margin-bottom: 24px;
-}
-.medicx-member-experience ul li {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 5px;
-}
-
 .medicx-member-skill-wrap2 h4 {
   margin-bottom: 24px;
 }
@@ -3963,6 +4140,75 @@ h1.post__title {
     transform: scaleX(1);
   }
 }
+.team-member-content h6 {
+  color: var(--heading-color);
+}
+.team-member-content p {
+  font-size: 20px;
+}
+
+.p-130 {
+  padding: 130px 0;
+}
+@media (max-width: 991px) {
+  .p-130 {
+    padding: 90px 0;
+  }
+}
+@media (max-width: 767px) {
+  .p-130 {
+    padding: 60px 0;
+  }
+}
+
+.medicx-member-experience h4 {
+  margin-bottom: 24px;
+}
+.medicx-member-experience ul li {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+.medicx-team-details-thumb {
+  text-align: center;
+}
+.medicx-team-details-thumb img {
+  width: 100%;
+}
+
+.medicx-member-field-experience-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.medicx-member-field-experience-title h5 {
+  margin-bottom: 30px;
+}
+.medicx-member-field-experience-title span {
+  font-weight: 400;
+  color: var(--body-color);
+}
+.medicx-member-field-experience-info {
+  padding: 30px;
+  background: rgba(0, 34, 255, 0.05);
+}
+.medicx-member-field-experience-info h5 {
+  margin-bottom: 24px;
+}
+
+.medicx-team-info-data ul li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.medicx-team-info-data ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .medicx-iconbox-wrap {
   border-radius: 10px;
   background-color: var(--white-color);
@@ -4080,6 +4326,12 @@ h1.post__title {
 .medicx-iconbox-data3 h5 {
   margin-bottom: 5px;
 }
+.medicx-iconbox-wrapper4 {
+  margin-top: 90px;
+}
+.medicx-iconbox-wrap4 {
+  margin-bottom: 35px;
+}
 
 .medicx-content-wrapv3 {
   padding-bottom: 50px;
@@ -4108,6 +4360,105 @@ h1.post__title {
 }
 .medicx-iconbox-datav3:last-child {
   margin-bottom: 0;
+}
+
+.medicx-aboutus-content {
+  margin-top: 80px;
+}
+@media (max-width: 991px) {
+  .medicx-aboutus-content {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-aboutus-content {
+    margin-top: 40px;
+  }
+}
+.medicx-aboutus-content-title {
+  margin-top: 35px;
+}
+@media (max-width: 767px) {
+  .medicx-aboutus-content-title {
+    margin-top: 50px;
+  }
+}
+.medicx-aboutus-content-title ul.nav-tabs {
+  width: 850px;
+  height: 6px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid rgba(0, 34, 255, 0.05);
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .medicx-aboutus-content-title ul.nav-tabs {
+    width: 732px;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-aboutus-content-title ul.nav-tabs {
+    width: 500px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
+.medicx-aboutus-content-title ul li.nav-item {
+  margin-top: -42px;
+}
+@media (max-width: 767px) {
+  .medicx-aboutus-content-title ul li.nav-item {
+    margin-top: -62px;
+  }
+}
+.medicx-aboutus-content-title ul a.nav-link {
+  margin-bottom: -1px;
+  background: 0 0;
+  border: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.medicx-aboutus-content-title ul a.nav-link.active {
+  border-bottom: 5px solid var(--accent-color);
+}
+
+.medicx-content-thumbb {
+  text-align: center;
+}
+.medicx-content-thumbb img {
+  width: 100%;
+  display: inline-block;
+}
+
+.medicx-faq-content-title ul.nav-tabs {
+  border: none;
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .medicx-faq-content-title ul.nav-tabs {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-faq-content-title ul.nav-tabs {
+    padding-bottom: 40px;
+  }
+}
+.medicx-faq-content-title ul li a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 16px 36px;
+  border-radius: 50px;
+  margin-right: 38px;
+  color: var(--heading-color) !important;
+  border: 2px solid var(--heading-color) !important;
+}
+.medicx-faq-content-title .nav-tabs .nav-link {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .medicx-video-thumb .medicx-popup-video {
@@ -6411,6 +6762,7 @@ a.medicx-connect-login img {
 }
 
 .medicx-accordion-item {
+  width: 100%;
   padding: 23px 24px;
   position: relative;
   margin-bottom: 24px;
@@ -6432,6 +6784,29 @@ a.medicx-connect-login img {
   display: block;
 }
 .medicx-accordion-item.open .medicx-accordion-body p {
+  font-size: 20px !important;
+}
+.medicx-accordion-item2 {
+  width: 100%;
+  padding: 23px 24px;
+  position: relative;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  transition: all 0.4s;
+  background: transparent;
+  border: 1px solid var(--light-color2);
+}
+.medicx-accordion-item2.open .medicx-active-iconn {
+  transform: rotate(180deg);
+}
+.medicx-accordion-item2.open {
+  border: 1px solid var(--light-color2);
+  box-shadow: none;
+}
+.medicx-accordion-item2.open .medicx-accordion-body {
+  display: block;
+}
+.medicx-accordion-item2.open .medicx-accordion-body p {
   font-size: 20px !important;
 }
 .medicx-accordion-header {
