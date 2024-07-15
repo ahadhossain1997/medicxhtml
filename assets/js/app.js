@@ -517,16 +517,16 @@
   });
 
   //medicx wow js
+
   var wow = new WOW({
     mobile: false,
     // default
     tablet: false
   });
   wow.init();
-
-  // AOS.init({
-  //   duration: 1200,
-  // })
+  AOS.init({
+    duration: 1200
+  });
   var currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
 
