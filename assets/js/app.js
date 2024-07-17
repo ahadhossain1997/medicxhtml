@@ -48,13 +48,6 @@
         $('#sticky-menu').removeClass('sticky-menu');
       }
     });
-    $(window).on('scroll', function () {
-      if ($(window).scrollTop() > 50) {
-        $('#sticky-menu2').addClass('sticky-menu2');
-      } else {
-        $('#sticky-menu2').removeClass('sticky-menu2');
-      }
-    });
 
     /*--------------------------------------------------------------
     medicx HERO SLIDER JS INIT

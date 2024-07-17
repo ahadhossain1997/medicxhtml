@@ -2837,6 +2837,17 @@ button#medicx-subscription-btn:hover {
   }
 }
 
+.frist-chechbox {
+  position: relative !important;
+  margin-bottom: 24px;
+}
+.frist-chechbox:last-child {
+  margin-bottom: 0;
+}
+.frist-chechbox h6 {
+  margin-bottom: 24px;
+}
+
 [type=radio]:checked,
 [type=radio]:not(:checked) {
   position: absolute;
@@ -2885,12 +2896,6 @@ button#medicx-subscription-btn:hover {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
-}
-
-[type=radio]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 
 .booking-section {
@@ -3243,6 +3248,11 @@ button#medicx-subscription-btn:hover {
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   margin-top: 5px;
+}
+
+.medicx-main-field-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .medicx-breadcrumb {
@@ -4659,10 +4669,12 @@ h1.post__title {
     padding-bottom: 40px;
   }
 }
-.medicx-faq-content-title ul li.nav-item {
-  margin-bottom: 20px;
+@media (max-width: 1199px) {
+  .medicx-faq-content-title ul li.nav-item {
+    margin-bottom: 20px;
+  }
 }
-.medicx-faq-content-title ul li.nav-item:last-child {
+.medicx-faq-content-title ul li:last-child {
   margin-bottom: 0;
 }
 .medicx-faq-content-title ul li a {
@@ -4675,6 +4687,12 @@ h1.post__title {
   color: var(--heading-color) !important;
   border: 2px solid var(--heading-color) !important;
 }
+.medicx-faq-content-title ul li a.nav-link.active {
+  background: var(--accent-color);
+  border: 2px solid transparent !important;
+  color: var(--white-color) !important;
+}
+
 .medicx-faq-content-title .nav-tabs .nav-link {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -8336,7 +8354,7 @@ img.plasicon {
 }
 .medicx-blog-wrap:hover {
   box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0705882353) !important;
-  border: 1px solid var(--white-color);
+  border: 1px solid transparent;
 }
 .medicx-blog-wrap:hover .medicx-blog-img img {
   transform: scale(1.1);
@@ -8379,7 +8397,7 @@ img.plasicon {
   gap: 15px;
   padding-bottom: 24px;
 }
-.medicx-blog-metav3 {
+.medicx-blog-metav1v3 {
   margin-top: -38px;
   z-index: 1;
   width: 140px;
@@ -8389,7 +8407,7 @@ img.plasicon {
   border-radius: 10px 10px 0 0;
   background: var(--light-color2);
 }
-.medicx-blog-metav3 p {
+.medicx-blog-metav1v3 p {
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
@@ -8723,7 +8741,6 @@ img.plasicon {
 .medicx-blog-tag-wrap {
   display: flex;
   gap: 5px;
-  align-items: center;
 }
 @media (max-width: 991px) {
   .medicx-blog-tag-wrap h5 {
@@ -8766,10 +8783,15 @@ img.plasicon {
     max-width: 470px;
   }
 }
+@media (max-width: 767px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data {
+    max-width: 330px;
+  }
+}
 .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data .medicx-comment-reply {
   position: absolute;
-  bottom: 130px;
-  right: -25px;
+  bottom: 85px;
+  right: -60px;
   font-weight: 700;
   font-size: 16px;
   color: var(--heading-color);
@@ -8778,6 +8800,19 @@ img.plasicon {
 @media (max-width: 1199px) {
   .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data .medicx-comment-reply {
     max-width: 470px;
+    bottom: 115px;
+    right: -45px;
+  }
+}
+@media (max-width: 991px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data .medicx-comment-reply {
+    right: -75px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data .medicx-comment-reply {
+    bottom: 180px;
+    right: -65px;
   }
 }
 .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data .medicx-comment-reply:hover {
@@ -8785,7 +8820,17 @@ img.plasicon {
 }
 .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 {
   position: relative;
-  max-width: 400px;
+  max-width: 593px;
+}
+@media (max-width: 1199px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 {
+    max-width: 418px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 {
+    max-width: 300px;
+  }
 }
 .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 .medicx-comment-reply2 {
   position: absolute;
@@ -8799,7 +8844,13 @@ img.plasicon {
 @media (max-width: 1199px) {
   .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 .medicx-comment-reply2 {
     bottom: 120px;
-    right: -40px;
+    right: -45px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 .medicx-comment-reply2 {
+    bottom: 150px;
+    right: -50px;
   }
 }
 .medicx-post-comment ul li.medicx-post-comment-wrap .medicx-post-comment-data2 .medicx-comment-reply2:hover {
