@@ -3370,7 +3370,7 @@ h1.post__title {
 .page-links .current {
   cursor: not-allowed;
   background-color: var(--accent-color);
-  color: var(--heading-color);
+  color: var(--white-color);
 }
 
 .medicx-navigation a,
@@ -3394,7 +3394,7 @@ h1.post__title {
 .medicx-navigation a:hover,
 .page-links a:hover {
   background-color: var(--accent-color);
-  color: var(--heading-color);
+  color: var(--white-color);
 }
 
 .medicx-hero-section {
@@ -3449,7 +3449,7 @@ h1.post__title {
 }
 @media (max-width: 991px) {
   .medicx-hero-item.medicx-herov3 {
-    padding: 150px 0 !important;
+    padding: 180px 0 60px !important;
   }
 }
 .medicx-hero-item2 {
@@ -3726,7 +3726,7 @@ h1.post__title {
 }
 @media (max-width: 767px) {
   .medicx-hero-slider-init3 ul.slick-dots {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -4461,6 +4461,10 @@ h1.post__title {
   stroke: var(--accent-color);
   fill: #fff;
   opacity: 1;
+}
+.medicx-iconbox-wrap.single-service-wrap {
+  padding: 29px !important;
+  border: 1px solid var(--light-color2);
 }
 .medicx-iconbox-icon {
   margin-bottom: 24px;
@@ -5259,8 +5263,14 @@ h1.post__title {
 
 .medicx-footer-social-wrap {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
   padding-bottom: 80px;
+}
+@media (max-width: 1199px) {
+  .medicx-footer-social-wrap {
+    justify-content: center;
+    gap: 15px;
+  }
 }
 @media (max-width: 991px) {
   .medicx-footer-social-wrap {
@@ -5279,11 +5289,6 @@ h1.post__title {
   padding: 16px 78px;
   transition: all 0.4s;
   border: 1px solid var(--accent-color);
-}
-@media (max-width: 1199px) {
-  .medicx-footer-social-button-wrap {
-    margin-bottom: 24px;
-  }
 }
 .medicx-footer-social-button-wrap.br-1 {
   border-radius: 50px 0 0 50px;
@@ -6383,6 +6388,10 @@ h1.post__title {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.medicx-pd-content-data {
+  padding-left: 8px;
+  border-left: 5px solid var(--accent-color);
 }
 
 .medicx-logo-section {
@@ -8268,6 +8277,10 @@ img.plasicon {
 .medicx-service-details-text ul li {
   font-weight: 600;
   margin-bottom: 8px;
+}
+.medicx-service-details-text.bl {
+  padding-left: 10px;
+  border-left: 5px solid var(--accent-color);
 }
 .medicx-service-details-skill h4 {
   margin-bottom: 15px;

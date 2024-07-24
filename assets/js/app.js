@@ -511,6 +511,16 @@
 
   //medicx wow js
 
+  // var wow = new WOW({
+  //   mobile: false,       // default
+  //   tablet:false
+  // });
+  // wow.init();
+
+  // AOS.init({
+  //   duration: 1200,
+  // })
+
   var wow = new WOW({
     mobile: false,
     // default
