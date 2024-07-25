@@ -7,21 +7,20 @@
   [Table of contents]
   medicx PRELOADER JS INIT
   medicx STICKY MENU JS INIT
+  medicx HERO SLIDER JS INIT
   medicx COUNTER JS INIT
-  medicx BRAND SLIDER JS INIT
   medicx TESTIMONIAL SLIDER JS INIT
-  medicx TESTIMONIAL SLIDER 2 JS INIT
-  medicx SLIDER LOGO WRAP JS INIT
-  medicx INTEGRATION JS INIT
+  medicx SERVICE SLIDER SECTION JS INIT
+  medicx SLIDER LOGO JS INIT
   medicx SERVICE CONTENT SLIDER SECTION JS INIT
-  medicx TESTIMONIAL 2 COLUMN SLIDER JS INIT
   medicx MAGNIFIC POPUP JS INIT
   medicx TESTIMONIAL SLIDER JS INIT
   medicx PORTFOLIO MASONAY FILTER JS
   medicx MAP JS INIT
   medicx TOGGOLE PASSWOR JS INIT
-  medicx SPLITING JS INIT
-  medicx PRICING TABLE JS INIT
+  medicx WOW JS INIT
+  medicx DATEPICKER JS INIT
+  medicx SELECT OPTION JS INIT
   -------------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
@@ -201,11 +200,7 @@
       });
     }
 
-    /*--------------------------------------------------------------
-    medicx TESTIMONIAL SLIDER 2 JS INIT
-    --------------------------------------------------------------*/
-
-    // SOFAX SERVICE SLIDER SECTION JS INIT
+    // medicx SERVICE SLIDER SECTION JS INIT
     var slider_service_section = $('.medicx-slider-service-section');
     if (slider_service_section.is_exist()) {
       slider_service_section.slick({
@@ -226,7 +221,7 @@
       });
     }
     /*--------------------------------------------------------------
-    medicx SLIDER LOGO WRAP JS INIT
+    medicx SLIDER LOGO JS INIT
     --------------------------------------------------------------*/
 
     var slider_logo = $('.medicx-slider-logo-wrap');
@@ -315,7 +310,6 @@
               height = multiplier_h ? columnWidth * multiplier_h[1] * 0.4 - 12 : columnWidth * 0.5;
             $item.css({
               width: width
-              //height: height
             });
           });
           return columnWidth;
@@ -364,7 +358,7 @@
   $(window).on("load", function () {}); // End window LODE
 
   /*--------------------------------------------------------------
-  medicx MAP JS
+  medicx MAP JS INIT
   ------------------------------------------------------------*/
   var google_map = $('#map');
   if (google_map.is_exist()) {
@@ -509,17 +503,7 @@
     }
   });
 
-  //medicx wow js
-
-  // var wow = new WOW({
-  //   mobile: false,       // default
-  //   tablet:false
-  // });
-  // wow.init();
-
-  // AOS.init({
-  //   duration: 1200,
-  // })
+  // medicx WOW JS INIT
 
   var wow = new WOW({
     mobile: false,
@@ -533,7 +517,7 @@
   var currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
 
-  // datepicker js init
+  // medicx DATEPICKER JS INIT
 
   jQuery(document).ready(function () {
     jQuery('#datepicker').datepicker({
@@ -550,7 +534,8 @@
     });
   });
 
-  // select option
+  // medicx SELECT OPTION JS INIT
+
   var index = 1;
   var on = function on(listener, query, fn) {
     document.querySelectorAll(query).forEach(function (item) {
