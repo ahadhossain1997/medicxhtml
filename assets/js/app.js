@@ -211,15 +211,10 @@
         speed: 8000,
         arrows: false,
         pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1349,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
+        cssEase: 'linear'
       });
     }
+
     /*--------------------------------------------------------------
     medicx SLIDER LOGO JS INIT
     --------------------------------------------------------------*/
@@ -227,7 +222,7 @@
     var slider_logo = $('.medicx-slider-logo-wrap');
     if (slider_logo.is_exist()) {
       slider_logo.slick({
-        slidesToShow: 7,
+        slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
