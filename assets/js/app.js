@@ -78,6 +78,7 @@
         autoplay: false,
         arrows: true,
         infinite: true,
+        speed: 1000,
         lazyLoad: 'progressive',
         prevArrow: '<button class="slide-arrow medicx-hero-next"></button>',
         nextArrow: '<button class="slide-arrow medicx-hero-prev"></button>'
@@ -92,6 +93,7 @@
         arrows: false,
         dots: true,
         infinite: true,
+        speed: 1000,
         lazyLoad: 'progressive'
       }).slickAnimation();
     }
@@ -104,6 +106,7 @@
         arrows: false,
         dots: true,
         infinite: true,
+        speed: 1000,
         lazyLoad: 'progressive'
       }).slickAnimation();
     }
@@ -164,6 +167,18 @@
           breakpoint: 991,
           settings: {
             slidesToShow: 1
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '100px'
+          }
+        }, {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '0px'
           }
         }]
       });
