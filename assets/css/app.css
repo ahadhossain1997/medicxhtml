@@ -9542,6 +9542,11 @@ button#medicx-submit-btn:hover {
 .medicx-countdown-item.border-radius-0 {
   border-radius: 0;
 }
+@media (max-width: 1450px) {
+  .medicx-countdown-item.border-radius-0 {
+    border-radius: 10px;
+  }
+}
 .medicx-countdown-item .number {
   display: flex;
   align-items: center;
@@ -9571,17 +9576,12 @@ button#medicx-submit-btn:hover {
   border-radius: 10px 0 0 10px;
   background: var(--heading-color);
 }
-@media (max-width: 1450px) {
-  .medicx-countdown-item1 {
-    border-radius: 10px;
-  }
-}
 .medicx-countdown-item1.border-radius-0 {
   border-radius: 0;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1450px) {
   .medicx-countdown-item1.border-radius-0 {
-    border-radius: 0;
+    border-radius: 10px;
   }
 }
 .medicx-countdown-item1.border-radius-1 {
@@ -9589,7 +9589,7 @@ button#medicx-submit-btn:hover {
 }
 @media (max-width: 1450px) {
   .medicx-countdown-item1.border-radius-1 {
-    border-radius: 0;
+    border-radius: 10px;
   }
 }
 .medicx-countdown-item1 .number {
