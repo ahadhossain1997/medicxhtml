@@ -15,14 +15,14 @@
 
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
-;(function(factory) {
+;(function(faqory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
+        define(['jquery'], faqory);
     } else if (typeof exports !== 'undefined') {
-        module.exports = factory(require('jquery'));
+        module.exports = faqory(require('jquery'));
     } else {
-        factory(jQuery);
+        faqory(jQuery);
     }
 
 }(function($) {

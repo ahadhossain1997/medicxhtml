@@ -1,31 +1,26 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 (function ($) {
   "use strict";
 
   /*------------------------------------------------------------------
   [Table of contents]
-  SOFAX PRELOADER JS INIT
-  SOFAX STICKY MENU JS INIT
-  SOFAX COUNTER JS INIT
-  SOFAX BRAND SLIDER JS INIT
-  SOFAX TESTIMONIAL SLIDER JS INIT
-  SOFAX TESTIMONIAL SLIDER 2 JS INIT
-  SOFAX SLIDER LOGO WRAP JS INIT
-  SOFAX INTEGRATION JS INIT
-  SOFAX SERVICE CONTENT SLIDER SECTION JS INIT
-  SOFAX TESTIMONIAL 2 COLUMN SLIDER JS INIT
-  SOFAX MAGNIFIC POPUP JS INIT
-  SOFAX TESTIMONIAL SLIDER JS INIT
-  SOFAX PORTFOLIO MASONAY FILTER JS
-  SOFAX MAP JS INIT
-  SOFAX TOGGOLE PASSWOR JS INIT
-  SOFAX SPLITING JS INIT
-  SOFAX PRICING TABLE JS INIT
+  medicx PRELOADER JS INIT
+  medicx STICKY MENU JS INIT
+  medicx HERO SLIDER JS INIT
+  medicx COUNTER JS INIT
+  medicx TESTIMONIAL SLIDER JS INIT
+  medicx SERVICE SLIDER SECTION JS INIT
+  medicx SLIDER LOGO JS INIT
+  medicx SERVICE CONTENT SLIDER SECTION JS INIT
+  medicx MAGNIFIC POPUP JS INIT
+  medicx TESTIMONIAL SLIDER JS INIT
+  medicx PORTFOLIO MASONAY FILTER JS
+  medicx MAP JS INIT
+  medicx TOGGOLE PASSWOR JS INIT
+  medicx WOW JS INIT
+  medicx DATEPICKER JS INIT
+  medicx SELECT OPTION JS INIT
   -------------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
@@ -37,13 +32,13 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   };
   $(function () {
     /*--------------------------------------------------------------
-    SOFAX PRELOADER JS INIT
+    medicx PRELOADER JS INIT
     --------------------------------------------------------------*/
 
-    $(".sofax-preloader-wrap").fadeOut(500);
+    $(".medicx-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    sofax STICKY MENU JS INIT
+    medicx STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
@@ -54,15 +49,77 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     });
 
     /*--------------------------------------------------------------
-    sofax COUNTER JS INIT
+    medicx HERO SLIDER JS INIT
     --------------------------------------------------------------*/
-    var sofax_counter = $('#sofax-counter');
-    if (sofax_counter.is_exist()) {
+
+    /*----------- Custom Animaiton For Slider ----------*/
+    $('[data-ani-duration]').each(function () {
+      var durationTime = $(this).data('ani-duration');
+      $(this).css('animation-duration', durationTime);
+    });
+    $('[data-ani-delay]').each(function () {
+      var delayTime = $(this).data('ani-delay');
+      $(this).css('animation-delay', delayTime);
+    });
+    $('[data-ani]').each(function () {
+      var animaionName = $(this).data('ani');
+      $(this).addClass(animaionName);
+      $('.slick-current [data-ani]').addClass('slider-animated');
+    });
+    $('.global-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+      $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
+      $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
+    });
+    var hero_slider = $('.medicx-hero-slider-init');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+        lazyLoad: 'progressive',
+        prevArrow: '<button class="slide-arrow medicx-hero-next"></button>',
+        nextArrow: '<button class="slide-arrow medicx-hero-prev"></button>'
+      }).slickAnimation();
+    }
+    var hero_slider = $('.medicx-hero-slider-init2');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        lazyLoad: 'progressive'
+      }).slickAnimation();
+    }
+    var hero_slider = $('.medicx-hero-slider-init3');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        lazyLoad: 'progressive'
+      }).slickAnimation();
+    }
+    /*--------------------------------------------------------------
+    medicx COUNTER JS INIT
+    --------------------------------------------------------------*/
+    var medicx_counter = $('#medicx-counter');
+    if (medicx_counter.is_exist()) {
       var a = 0;
       $(window).scroll(function () {
-        var oTop = $(sofax_counter).offset().top - window.innerHeight;
+        var oTop = $(medicx_counter).offset().top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.sofax-counter').each(function () {
+          $('.medicx-counter').each(function () {
             var $this = $(this),
               countTo = $this.attr('data-percentage');
             $({
@@ -84,55 +141,73 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }
       });
     }
-    /*--------------------------------------------------------------
-    SOFAX BRAND SLIDER JS INIT
-    --------------------------------------------------------------*/
-    var brand_slider = $('.sofax-brand-slider');
-    if (brand_slider.is_exist()) {
-      brand_slider.slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
 
     /*--------------------------------------------------------------
-    SOFAX TESTIMONIAL SLIDER JS INIT
+    medicx TESTIMONIAL SLIDER JS INIT
     --------------------------------------------------------------*/
-    var t_slider = $('.sofax-testimonial-slider');
+    var t_slider = $('.medicx-testimonial-slider-init');
     if (t_slider.is_exist()) {
       t_slider.slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
+        arrows: true,
+        autoplay: false,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '200px',
+        lazyLoad: 'progressive',
+        prevArrow: '<button class="slide-arrow medicx-t-next"></button>',
+        nextArrow: '<button class="slide-arrow medicx-t-prev"></button>',
         responsive: [{
           breakpoint: 1349,
           settings: {
             slidesToShow: 2
           }
         }, {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1
+          }
+        }, {
           breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '100px'
+          }
+        }, {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '0px'
+          }
+        }]
+      });
+    }
+    var t_slider = $('.medicx-testimonialv2-slider-init');
+    if (t_slider.is_exist()) {
+      t_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        infinite: true,
+        lazyLoad: 'progressive',
+        prevArrow: '<button class="slide-arrow medicx-t-next"></button>',
+        nextArrow: '<button class="slide-arrow medicx-t-prev"></button>'
+      }).slickAnimation();
+    }
+    var t_slider = $('.medicx-testimonial-slider-init3');
+    if (t_slider.is_exist()) {
+      t_slider.slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        lazyLoad: 'progressive',
+        responsive: [{
+          breakpoint: 991,
           settings: {
             slidesToShow: 1
           }
@@ -140,43 +215,29 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       });
     }
 
-    /*--------------------------------------------------------------
-    SOFAX TESTIMONIAL SLIDER 2 JS INIT
-    --------------------------------------------------------------*/
-
-    var t_slider2 = $('.sofax-testimonial-slider-2');
-    if (t_slider2.is_exist()) {
-      t_slider2.slick({
-        slidesToShow: 4,
+    // medicx SERVICE SLIDER SECTION JS INIT
+    var slider_service_section = $('.medicx-slider-service-section');
+    if (slider_service_section.is_exist()) {
+      slider_service_section.slick({
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
         speed: 8000,
         arrows: false,
         pauseOnHover: false,
-        rtl: true,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1349,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
+        cssEase: 'linear'
       });
     }
+
     /*--------------------------------------------------------------
-    SOFAX SLIDER LOGO WRAP JS INIT
+    medicx SLIDER LOGO JS INIT
     --------------------------------------------------------------*/
 
-    var slider_logo = $('.sofax-slider-logo-wrap');
+    var slider_logo = $('.medicx-slider-logo-wrap');
     if (slider_logo.is_exist()) {
       slider_logo.slick({
-        slidesToShow: 7,
+        slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
@@ -212,109 +273,9 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }]
       });
     }
-    /*--------------------------------------------------------------
-    SOFAX INTEGRATION IMAGES SLIDER JS INIT
-    --------------------------------------------------------------*/
-    var integration_slider_icon_data = $('.sofax-integration-slider-icon-data');
-    if (integration_slider_icon_data.is_exist()) {
-      integration_slider_icon_data.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
-    var integration_slider_icon_data_wrap = $('.sofax-integration-slider-icon-data-wrap');
-    if (integration_slider_icon_data_wrap.is_exist()) {
-      integration_slider_icon_data_wrap.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        rtl: true,
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
 
-    // SOFAX SERVICE SLIDER SECTION JS INIT
-    var slider_service_section = $('.sofax-slider-service-section');
-    if (slider_service_section.is_exist()) {
-      slider_service_section.slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 8000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear'
-      });
-    }
-
-    //  sofax-testimonial-2column-sliderv5
-    var testimonial_2column_sliderv5 = $('.sofax-testimonial-2column-sliderv5');
-    if (testimonial_2column_sliderv5.is_exist()) {
-      testimonial_2column_sliderv5.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: true,
-        infinite: true,
-        prevArrow: '<button class="slide-arrow sofax-t-next"></button>',
-        nextArrow: '<button class="slide-arrow sofax-t-prev"></button>'
-      });
-    }
     /*--------------------------------------------------------------
-    sofax MAGNIFIC POPUP JS INIT
+    medicx MAGNIFIC POPUP JS INIT
     ------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
     if (popup_youtube.is_exist()) {
@@ -323,70 +284,18 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         mainClass: 'mfp-fade'
       });
     }
-
-    // testimonial slider
-
-    $('.sofax-testimonial-2column-slider').slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      fade: false,
-      adaptiveHeight: true,
-      infinite: false,
-      useTransform: true,
-      speed: 400
-    }, "infinite", true), "cssEase", 'cubic-bezier(0.77, 0, 0.18, 1)'), "prevArrow", '<button class="slide-arrow sofax-t-next"></button>'), "nextArrow", '<button class="slide-arrow sofax-t-prev"></button>'));
-    $('.sofax-testimonial-slider-nav').on('init', function (event, slick) {
-      $('.sofax-testimonial-slider-nav .slick-slide.slick-current').addClass('is-active');
-    }).slick({
-      slidesToShow: 7,
-      slidesToScroll: 7,
-      dots: false,
-      focusOnSelect: false,
-      infinite: false,
-      responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5
-        }
-      }, {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
-        }
-      }, {
-        breakpoint: 420,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      }]
-    });
-    $('.sofax-testimonial-2column-slider').on('afterChange', function (event, slick, currentSlide) {
-      $('.sofax-testimonial-slider-nav').slick('slickGoTo', currentSlide);
-      var currrentNavSlideElem = '.sofax-testimonial-slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-      $('.sofax-testimonial-slider-nav .slick-slide.is-active').removeClass('is-active');
-      $(currrentNavSlideElem).addClass('is-active');
-    });
-    $('.sofax-testimonial-slider-nav').on('click', '.slick-slide', function (event) {
-      event.preventDefault();
-      var goToSingleSlide = $(this).data('slick-index');
-      $('.sofax-testimonial-2column-slider').slick('slickGoTo', goToSingleSlide);
-    });
   }); /*End document ready*/
 
   $(window).on("resize", function () {}); // end window resize
 
   $(window).on("load", function () {
     /*--------------------------------------------------------------
-    SOFAX PORTFOLIO MASONAY FILTER JS
+    medicx PORTFOLIO MASONAY FILTER JS
     ------------------------------------------------------------*/
 
-    var sofax_filter_gallery = $('#sofax-portfolio-grid');
-    if (sofax_filter_gallery.is_exist()) {
-      var $container = $(sofax_filter_gallery),
+    var medicx_filter_gallery = $('#medicx-portfolio-grid');
+    if (medicx_filter_gallery.is_exist()) {
+      var $container = $(medicx_filter_gallery),
         colWidth = function colWidth() {
           var w = $container.width(),
             columnNum = 1,
@@ -411,7 +320,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
               height = multiplier_h ? columnWidth * multiplier_h[1] * 0.4 - 12 : columnWidth * 0.5;
             $item.css({
               width: width
-              //height: height
             });
           });
           return columnWidth;
@@ -428,7 +336,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         };
       isotope();
       $(window).resize(isotope);
-      var $optionSets = $('.sofax-portfolio-menu .option-set'),
+      var $optionSets = $('.medicx-portfolio-menu .option-set'),
         $optionLinks = $optionSets.find('li');
       $optionLinks.click(function () {
         var $this = $(this);
@@ -460,7 +368,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   $(window).on("load", function () {}); // End window LODE
 
   /*--------------------------------------------------------------
-  sofax MAP JS
+  medicx MAP JS INIT
   ------------------------------------------------------------*/
   var google_map = $('#map');
   if (google_map.is_exist()) {
@@ -593,7 +501,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
   // external js: isotope.pkgd.js
 
-  // SOFAX TOGGOLE PASSWOR JS INIT
+  // medicx TOGGOLE PASSWOR JS INIT
 
   $(".toggle-password").click(function () {
     $(this).toggleClass("fa-eye fa-eye-slash");
@@ -605,7 +513,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }
   });
 
-  //sofax wow js
+  // medicx WOW JS INIT
 
   var wow = new WOW({
     mobile: false,
@@ -616,9 +524,45 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   AOS.init({
     duration: 1200
   });
-
-  // currenr year
-
   var currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
+
+  // medicx DATEPICKER JS INIT
+
+  jQuery(document).ready(function () {
+    jQuery('#datepicker').datepicker({
+      format: 'dd-mm-yyyy',
+      startDate: '+1d'
+    });
+  });
+  jQuery(document).ready(function () {
+    jQuery('#id_StartDate').datepicker({
+      dateFormat: 'yy/mm/dd',
+      startDate: '0d',
+      minDate: 0,
+      highlightWeek: true
+    });
+  });
+
+  // medicx SELECT OPTION JS INIT
+
+  var index = 1;
+  var on = function on(listener, query, fn) {
+    document.querySelectorAll(query).forEach(function (item) {
+      item.addEventListener(listener, function (el) {
+        fn(el);
+      });
+    });
+  };
+  on('click', '.selectBtn', function (item) {
+    var next = item.target.nextElementSibling;
+    next.classList.toggle('toggle');
+    next.style.zIndex = index++;
+  });
+  on('click', '.option', function (item) {
+    item.target.parentElement.classList.remove('toggle');
+    var parent = item.target.closest('.select').children[0];
+    parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+    parent.innerText = item.target.innerText;
+  });
 })(jQuery);

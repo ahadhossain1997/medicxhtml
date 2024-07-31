@@ -8,29 +8,29 @@
  *
  * Date: 2023-08-28T13:37Z
  */
-( function( global, factory ) {
+( function( global, faqory ) {
 
 	"use strict";
 
 	if ( typeof module === "object" && typeof module.exports === "object" ) {
 
 		// For CommonJS and CommonJS-like environments where a proper `window`
-		// is present, execute the factory and get jQuery.
+		// is present, execute the faqory and get jQuery.
 		// For environments that do not have a `window` with a `document`
-		// (such as Node.js), expose a factory as module.exports.
+		// (such as Node.js), expose a faqory as module.exports.
 		// This accentuates the need for the creation of a real `window`.
 		// e.g. var jQuery = require("jquery")(window);
 		// See ticket trac-14549 for more info.
 		module.exports = global.document ?
-			factory( global, true ) :
+			faqory( global, true ) :
 			function( w ) {
 				if ( !w.document ) {
 					throw new Error( "jQuery requires a window with a document" );
 				}
-				return factory( w );
+				return faqory( w );
 			};
 	} else {
-		factory( global );
+		faqory( global );
 	}
 
 // Pass this if window is not defined yet
@@ -3734,7 +3734,7 @@ jQuery.extend( {
 			// the primary Deferred
 			primary = jQuery.Deferred(),
 
-			// subordinate callback factory
+			// subordinate callback faqory
 			updateFunc = function( i ) {
 				return function( value ) {
 					resolveContexts[ i ] = this;
@@ -8917,8 +8917,8 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 	function inspect( dataType ) {
 		var selected;
 		inspected[ dataType ] = true;
-		jQuery.each( structure[ dataType ] || [], function( _, prefilterOrFactory ) {
-			var dataTypeOrTransport = prefilterOrFactory( options, originalOptions, jqXHR );
+		jQuery.each( structure[ dataType ] || [], function( _, prefilterOrfaqory ) {
+			var dataTypeOrTransport = prefilterOrfaqory( options, originalOptions, jqXHR );
 			if ( typeof dataTypeOrTransport === "string" &&
 				!seekingTransport && !inspected[ dataTypeOrTransport ] ) {
 
