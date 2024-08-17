@@ -1854,7 +1854,7 @@ header.medicx-header-section.sticky-menu {
   }
 }
 .sticky-menu .medicx-header-top2 {
-  margin-top: -84px;
+  margin-top: -92px;
 }
 .sticky-menu .medicx-header-top3 {
   margin-top: -81px;
@@ -2405,9 +2405,11 @@ header.medicx-header-section.sticky-menu {
   .medicx-default-btn,
   #medicx-submit-btn {
     position: static;
-    width: 100%;
-    margin-top: 24px;
   }
+}
+.medicx-default-btn.btn-btn2,
+#medicx-submit-btn.btn-btn2 {
+  border: 2px solid var(--accent-color);
 }
 .medicx-default-btn.btn-hover:hover,
 #medicx-submit-btn.btn-hover:hover {
@@ -3538,6 +3540,11 @@ h1.post__title {
     padding: 200px 0 100px;
   }
 }
+@media (max-width: 767px) {
+  .medicx-hero-item {
+    padding: 150px 0 80px;
+  }
+}
 .medicx-hero-item::before {
   content: "";
   left: 0;
@@ -3582,6 +3589,11 @@ h1.post__title {
 @media (max-width: 991px) {
   .medicx-hero-item2 {
     padding: 200px 0 250px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-hero-item2 {
+    padding: 150px 0 220px;
   }
 }
 .medicx-hero-item2::before {
@@ -3740,20 +3752,20 @@ h1.post__title {
   width: 80px;
   height: 80px;
   z-index: 99;
+  border: none;
   display: flex;
-  align-items: center;
   cursor: pointer;
   position: absolute;
+  transition: all 0.4s;
+  align-items: center;
+  border-radius: 100px;
   background-size: 20px;
+  justify-content: center;
+  transform: translateY(-50%);
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.4s;
-  justify-content: center;
-  background-image: url(../images/v1/leftarrow.svg);
-  border: none;
   background-color: var(--white-color);
-  border-radius: 100px;
-  transform: translateY(-50%);
+  background-image: url(../images/v1/leftarrow.svg);
 }
 @media (max-width: 1450px) {
   .medicx-hero-slider-init .medicx-hero-next,
@@ -3764,7 +3776,7 @@ h1.post__title {
     background-size: 15px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .medicx-hero-slider-init .medicx-hero-next,
   .medicx-hero-slider-init .medicx-hero-prev {
     display: none !important;
@@ -3993,6 +4005,9 @@ h1.post__title {
   border: 1px solid var(--white-color);
   box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0705882353);
 }
+.medicx-team-member-wrap:hover .medicx-team-member-img img.team-thumb {
+  transform: scale(1.1);
+}
 .medicx-team-member-wrap:hover .medicx-team-member-img::before {
   opacity: 1;
 }
@@ -4003,6 +4018,7 @@ h1.post__title {
 }
 .medicx-team-member-img {
   position: relative;
+  overflow: hidden;
 }
 .medicx-team-member-img::before {
   position: absolute;
@@ -4017,6 +4033,8 @@ h1.post__title {
 }
 .medicx-team-member-img img {
   width: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
 }
 .medicx-team-member-content {
   padding: 30px;
@@ -5173,6 +5191,20 @@ h1.post__title {
   opacity: 0;
   visibility: hidden;
 }
+.medicx-social-icon.team-v1 ul li a {
+  width: 50px;
+  height: 50px;
+}
+.medicx-social-icon.footer-1-social-icon ul li {
+  margin-right: 15px;
+}
+.medicx-social-icon.footer-1-social-icon ul li:last-child {
+  margin-right: 0;
+}
+.medicx-social-icon.footer-1-social-icon ul li a {
+  width: 40px;
+  height: 40px;
+}
 .medicx-social-icon ul li {
   display: inline-block;
   margin-right: 24px;
@@ -5226,40 +5258,6 @@ h1.post__title {
   fill: white;
 }
 .medicx-social-icon2 ul li a img {
-  width: auto;
-}
-
-.footer-1-social-icon.social_position {
-  transition: all 0.4s;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-}
-.footer-1-social-icon u li {
-  display: inline-block;
-  margin-right: 24px;
-}
-.footer-1-social-icon u li:last-child {
-  margin-right: 0;
-}
-.footer-1-social-icon u li a {
-  width: 45px;
-  height: 45px;
-  border-radius: 100px;
-  border: 1px solid var(--white-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
-}
-.footer-1-social-icon u li a:hover {
-  background: var(--accent-color);
-  border: transparent;
-}
-.footer-1-social-icon u li a img {
   width: auto;
 }
 
@@ -5436,7 +5434,6 @@ h1.post__title {
 @media (max-width: 991px) {
   .medicx-list-icon-wrap {
     margin: 24px 0 0 0;
-    justify-content: center;
   }
 }
 @media (max-width: 767px) {
@@ -5592,7 +5589,7 @@ h1.post__title {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #0D0E1D; /* --- Lijn progres kleur --- */
+  stroke: var(--accent-color); /* --- Lijn progres kleur --- */
   stroke-width: 4;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;
@@ -5600,10 +5597,13 @@ h1.post__title {
 }
 
 .top-arrow {
-  top: 50%;
-  left: 50%;
+  top: 44%;
+  left: 55%;
   position: absolute;
   transform: translate(-50%, -50%);
+}
+.top-arrow img {
+  width: 80%;
 }
 
 .contentv8 h2 {
@@ -7730,11 +7730,6 @@ img.plasicon {
     padding: 80px 0 56px;
   }
 }
-@media (max-width: 425px) {
-  .medicx-section-padding {
-    padding: 60px 0 32px;
-  }
-}
 
 .medicx-section-padding2 {
   padding: 130px 0;
@@ -7755,31 +7750,26 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding3 {
-    padding: 0 0 90px;
+    padding: 0 0 96px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding3 {
-    padding: 0 0 60px;
-  }
-}
-@media (max-width: 425px) {
-  .medicx-section-padding3 {
-    padding: 0 0 40px;
+    padding: 0 0 56px;
   }
 }
 
 .medicx-section-padding4 {
-  padding: 250px 0 106px;
-}
-@media (max-width: 1199px) {
-  .medicx-section-padding4 {
-    padding: 300px 0 106px;
-  }
+  padding: 210px 0 106px;
 }
 @media (max-width: 991px) {
   .medicx-section-padding4 {
-    padding: 160px 0 76px;
+    padding: 150px 0 76px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-section-padding4 {
+    padding: 100px 0 76px;
   }
 }
 
@@ -7793,12 +7783,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding5 {
-    padding: 0 0 90px;
+    padding: 0 0 100px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding5 {
-    padding: 60px 0;
+    padding: 80px 0;
   }
 }
 
@@ -7822,12 +7812,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding7 {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding7 {
-    padding: 60px 0;
+    padding: 80px 0;
   }
 }
 
@@ -7836,12 +7826,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding8 {
-    padding: 90px 0 130px;
+    padding: 100px 0 130px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding8 {
-    padding: 60px 0;
+    padding: 80px 0;
   }
 }
 
@@ -7850,12 +7840,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding9 {
-    padding-top: 90px;
+    padding-top: 100px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding9 {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 
@@ -8011,11 +8001,6 @@ img.plasicon {
 
 .medicx-default-content h2 {
   margin-bottom: 20px;
-}
-@media (max-width: 991px) {
-  .medicx-default-content {
-    text-align: center;
-  }
 }
 
 .mr-90 {
@@ -8198,50 +8183,6 @@ img.plasicon {
   }
 }
 /*1.3 pages css*/
-/* top scroll */
-.progress-wrap {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  display: block;
-  border-radius: 50px;
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
-  z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-
-.progress-wrap.active-progress {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.progress-wrap svg path {
-  fill: none;
-}
-
-.progress-wrap svg.progress-circle path {
-  stroke: #0D0E1D; /* --- Lijn progres kleur --- */
-  stroke-width: 4;
-  box-sizing: border-box;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-
-.top-arrow {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-
 .medicx-integration-slider-icon-data-wrap.slick-initialized.slick-slider {
   direction: rtl;
 }
@@ -8265,11 +8206,6 @@ img.plasicon {
 @media (max-width: 991px) {
   .servicev1 {
     margin-top: -80px;
-  }
-}
-@media (max-width: 767px) {
-  .servicev1 {
-    margin-top: -60px;
   }
 }
 
@@ -8693,7 +8629,7 @@ img.plasicon {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 .medicx-blog-content {
   padding: 30px 17px;
@@ -9302,7 +9238,7 @@ button#medicx-submit-btn:hover {
 }
 
 .medicx-contact-schedule-time-wrap {
-  padding: 24px;
+  padding: 30px 24px;
   background: var(--accent-color);
   border-radius: 10px;
 }
@@ -9320,12 +9256,12 @@ button#medicx-submit-btn:hover {
 @media (max-width: 991px) {
   .medicx-contact-schedule-time {
     justify-content: center;
-    gap: 110px;
+    gap: 150px;
   }
 }
 @media (max-width: 575px) {
   .medicx-contact-schedule-time {
-    gap: 30px;
+    gap: 85px;
   }
 }
 .medicx-contact-schedule-time .date h6 {
