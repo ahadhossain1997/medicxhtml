@@ -342,7 +342,7 @@ h2,
 @media (max-width: 1199px) {
   h2,
   .h2 {
-    font-size: 60px;
+    font-size: 54px;
   }
 }
 @media (max-width: 991px) {
@@ -2087,6 +2087,9 @@ header.medicx-header-section.sticky-menu {
   font-size: 18px;
   color: var(--white-color);
 }
+.medicx-textarea a.tel-number h4 {
+  color: var(--white-color);
+}
 @media (max-width: 1199px) {
   .medicx-textarea {
     max-width: 600px;
@@ -2346,7 +2349,7 @@ header.medicx-header-section.sticky-menu {
 
 .medicx-subscription-field2 input {
   margin: 0;
-  height: 50px;
+  height: 50px !important;
   width: 100%;
   color: var(--white-color);
   font-weight: 600;
@@ -2411,6 +2414,10 @@ header.medicx-header-section.sticky-menu {
 #medicx-submit-btn.btn-btn2 {
   border: 2px solid var(--accent-color);
 }
+.medicx-default-btn.btn-btn3,
+#medicx-submit-btn.btn-btn3 {
+  border: 2px solid var(--white-color);
+}
 .medicx-default-btn.btn-hover:hover,
 #medicx-submit-btn.btn-hover:hover {
   background: var(--white-color) !important;
@@ -2434,7 +2441,7 @@ header.medicx-header-section.sticky-menu {
 }
 .medicx-default-btn.outline-btn,
 #medicx-submit-btn.outline-btn {
-  padding: 17px 40px;
+  padding: 14px 40px;
   color: var(--heading-color) !important;
   background-color: transparent;
   border: 2px solid var(--heading-color);
@@ -2448,7 +2455,7 @@ header.medicx-header-section.sticky-menu {
 }
 .medicx-default-btn.outline-btn2,
 #medicx-submit-btn.outline-btn2 {
-  padding: 17px 40px;
+  padding: 16px 40px;
   color: var(--white-color) !important;
   background-color: transparent;
   border: 2px solid var(--white-color);
@@ -3036,7 +3043,7 @@ button#medicx-subscription-btn:hover {
   padding: 8px;
   position: static;
   width: 100%;
-  margin-top: 12px;
+  margin-top: 15px;
   height: 50px;
   transition: all 0.4s;
   color: var(--white-color);
@@ -4057,11 +4064,11 @@ h1.post__title {
   transition: all 0.4s;
   position: absolute;
   bottom: 0;
-  right: 24px;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   padding: 15px 25px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   background-color: var(--accent-color);
 }
 .medicx-team-wrap .team-position h4 {
@@ -4071,7 +4078,7 @@ h1.post__title {
   transition: all 0.4s;
   position: absolute;
   top: 10px;
-  left: 0;
+  left: -24px;
   opacity: 0;
   visibility: hidden;
   padding: 15px 25px;
@@ -4094,23 +4101,28 @@ h1.post__title {
 .medicx-team-wrap .team2-position ul li a:hover svg path {
   fill: white;
 }
-.medicx-team-wrap :hover .medicx-team-thumb::before {
+.medicx-team-wrap:hover .medicx-team-thumb::before {
   opacity: 1;
 }
-.medicx-team-wrap :hover .team-position {
+.medicx-team-wrap:hover .team-position {
   opacity: 1;
   visibility: visible;
   bottom: 24px;
-  right: 24px;
+  right: 0;
 }
-.medicx-team-wrap :hover .team2-position {
+.medicx-team-wrap:hover .team2-position {
   opacity: 1;
+  left: 0;
   visibility: visible;
+}
+.medicx-team-wrap:hover .medicx-team-thumb img {
+  transform: scale(1.1);
 }
 .medicx-team-thumb {
   margin-bottom: 24px;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .medicx-team-thumb::before {
   position: absolute;
@@ -4125,6 +4137,8 @@ h1.post__title {
 .medicx-team-thumb img {
   border-radius: 10px;
   width: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
 }
 .medicx-team-wrapv3 {
   padding: 20px 20px 0 20px;
@@ -4192,12 +4206,18 @@ h1.post__title {
   visibility: visible;
   bottom: 34%;
 }
+.medicx-team-wrapv3:hover .medicx-team-member img {
+  transform: scale(1.1);
+}
 .medicx-team-member {
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .medicx-team-member img {
   width: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
 }
 .medicx-team-member::before {
   position: absolute;
@@ -4252,6 +4272,7 @@ h1.post__title {
 }
 @media (max-width: 991px) {
   .medicx-team-button-wrap {
+    padding: 10px 20px;
     margin-bottom: 5px;
   }
 }
@@ -4423,6 +4444,19 @@ h1.post__title {
 @media (max-width: 991px) {
   .medicx-member-field-experience-wrap {
     display: block;
+  }
+}
+.medicx-member-field-experience-title h4 {
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .medicx-member-field-experience-title h4 {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-member-field-experience-title h4 {
+    margin-bottom: 30px;
   }
 }
 .medicx-member-field-experience-title h5 {
@@ -5048,7 +5082,7 @@ h1.post__title {
 .medicx-testimonialv2-slider-init .medicx-t-next,
 .medicx-testimonialv2-slider-init .medicx-t-prev {
   top: 50%;
-  left: 50px;
+  left: 0;
   width: 80px;
   height: 80px;
   z-index: 99;
@@ -5065,6 +5099,11 @@ h1.post__title {
   border: none;
   border-radius: 100px;
   transform: translateY(-50%);
+  opacity: 0.2;
+}
+.medicx-testimonialv2-slider-init .medicx-t-next:hover,
+.medicx-testimonialv2-slider-init .medicx-t-prev:hover {
+  opacity: 1;
 }
 @media (max-width: 1450px) {
   .medicx-testimonialv2-slider-init .medicx-t-next,
@@ -5078,27 +5117,25 @@ h1.post__title {
 @media (max-width: 991px) {
   .medicx-testimonialv2-slider-init .medicx-t-next,
   .medicx-testimonialv2-slider-init .medicx-t-prev {
-    top: 75%;
-  }
-}
-@media (max-width: 767px) {
-  .medicx-testimonialv2-slider-init .medicx-t-next,
-  .medicx-testimonialv2-slider-init .medicx-t-prev {
     display: none !important;
   }
 }
 
 .medicx-testimonialv2-slider-init .medicx-t-prev {
   left: auto;
-  right: 50px;
+  right: 0;
   background-image: url(../images/v1/rightarrow.svg);
+  opacity: 0.2;
+}
+.medicx-testimonialv2-slider-init .medicx-t-prev:hover {
+  opacity: 1;
 }
 @media (max-width: 1450px) {
   .medicx-testimonialv2-slider-init .medicx-t-prev {
     right: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991) {
   .medicx-testimonialv2-slider-init .medicx-t-prev {
     display: none !important;
   }
@@ -5213,8 +5250,8 @@ h1.post__title {
   margin-right: 0;
 }
 .medicx-social-icon ul li a {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 100px;
   border: 1px solid var(--white-color);
   display: flex;
@@ -5446,6 +5483,16 @@ h1.post__title {
   gap: 24px;
   align-items: center;
 }
+@media (max-width: 1199px) {
+  .medicx-list-icon-wrap2 {
+    gap: 9px;
+  }
+}
+@media (max-width: 991px) {
+  .medicx-list-icon-wrap2 {
+    gap: 24px;
+  }
+}
 @media (max-width: 767px) {
   .medicx-list-icon-wrap2 {
     display: block;
@@ -5454,6 +5501,11 @@ h1.post__title {
 .medicx-list-icon-wrap3 {
   display: flex;
   gap: 24px;
+}
+@media (max-width: 991px) {
+  .medicx-list-icon-wrap3 {
+    gap: 60px;
+  }
 }
 @media (max-width: 767px) {
   .medicx-list-icon-wrap3 {
@@ -5546,9 +5598,33 @@ h1.post__title {
 .medicx-list-icon-icon2.icon3 ul li {
   margin-bottom: 24px;
 }
+@media (max-width: 1399px) {
+  .medicx-list-icon-icon2.icon3 ul li {
+    padding-left: 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .medicx-list-icon-icon2.icon3 ul li {
+    font-size: 20px;
+    line-height: 28px;
+    padding-left: 44px;
+  }
+}
+@media (max-width: 991px) {
+  .medicx-list-icon-icon2.icon3 ul li {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 80px;
+  }
+}
 @media (max-width: 767px) {
   .medicx-list-icon-icon2.icon3 ul li {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .medicx-list-icon-icon2.icon3 ul li {
+    padding-left: 65px;
   }
 }
 @media (max-width: 767px) {
@@ -5556,6 +5632,37 @@ h1.post__title {
     position: absolute;
     left: 0;
     top: -9px;
+  }
+}
+@media (max-width: 1199px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    width: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    width: 12%;
+  }
+}
+@media (max-width: 575px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    width: 10%;
+  }
+}
+@media (max-width: 575px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    top: 0;
+  }
+}
+@media (max-width: 499px) {
+  .medicx-list-icon-icon2.icon3 ul li img {
+    top: 15px;
+    width: 15%;
   }
 }
 
@@ -8271,20 +8378,25 @@ img.plasicon {
     visibility: visible;
     width: 100%;
     left: 0;
+    border-radius: 0;
   }
 }
-.medicx-service-wrap :hover .medicx-service-thumb::before {
+.medicx-service-wrap:hover .medicx-service-thumb::before {
   opacity: 1;
 }
-.medicx-service-wrap :hover .service_position {
+.medicx-service-wrap:hover .service_position {
   opacity: 1;
   visibility: visible;
   bottom: 24px;
   left: 24px;
 }
+.medicx-service-wrap:hover .medicx-service-thumb img.service-thumb2 {
+  transform: scale(1.1);
+}
 .medicx-service-thumb {
   margin-bottom: 24px;
   position: relative;
+  overflow: hidden;
 }
 .medicx-service-thumb::before {
   position: absolute;
@@ -8295,6 +8407,10 @@ img.plasicon {
   left: 0;
   opacity: 0;
   transition: 0.3s;
+}
+.medicx-service-thumb img {
+  object-fit: cover;
+  transition: all 0.4s;
 }
 .medicx-service-content-wrap h4 {
   color: var(--white-color);
@@ -8308,6 +8424,9 @@ img.plasicon {
   line-height: 28px;
   font-weight: 700;
   color: var(--white-color);
+}
+.medicx-service-content-wrap a.medicx-site-btn:hover img {
+  transform: rotate(45deg);
 }
 .medicx-service-content-wrap a.medicx-site-btn img {
   margin-left: 10px;
@@ -8500,6 +8619,9 @@ img.plasicon {
   bottom: 30%;
   left: 0%;
 }
+.medicx-about-wrapperv3:hover .medicx-about-thumb img {
+  transform: scale(1.1);
+}
 .medicx-about-titlev3-wrap {
   display: flex;
   gap: 10px;
@@ -8508,10 +8630,13 @@ img.plasicon {
 }
 .medicx-about-thumb {
   position: relative;
+  overflow: hidden;
 }
 .medicx-about-thumb img {
   border-radius: 10px;
   width: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
 }
 .medicx-about-thumb p {
   font-size: 20px !important;
@@ -8603,6 +8728,20 @@ img.plasicon {
 .medicx-aboutus-content-title ul a.nav-link.active {
   margin-bottom: -5px;
   border-bottom: 5px solid var(--accent-color);
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+@media (max-width: 1199px) {
+  .mr-100 {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .mr-100 {
+    margin-right: 0;
+  }
 }
 
 .medicx-blog-wrap {
@@ -8700,12 +8839,16 @@ img.plasicon {
   margin-left: 10px;
   width: 30px;
   height: 30px;
+  transition: all 0.4s;
   padding: 0px 8px;
   background-color: var(--accent-color);
   border-radius: 100px;
 }
 .medicx-blog-btn-icon2:hover {
   color: var(--heading-color) !important;
+}
+.medicx-blog-btn-icon2:hover svg {
+  transform: rotate(45deg);
 }
 .medicx-blog-wrap2 {
   border-radius: 10px;
