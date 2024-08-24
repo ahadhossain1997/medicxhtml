@@ -402,8 +402,8 @@ bodt {
   .site-menu-main .nav-link-item {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 
@@ -429,18 +429,6 @@ bodt {
   border-radius: 6px;
 }
 
-.site-menu-main .sub-menu:before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 22px;
-  transform: rotate(45deg) translatey(-11px);
-  z-index: 8;
-}
-
 .sub-menu.megamenu:before {
   content: none;
 }
@@ -448,13 +436,6 @@ bodt {
 .site-menu-main .sub-menu.shape-none:before {
   content: none;
 }
-
-/*@media (min-width: 992px) {
-  .site-menu-main .sub-menu {
-    min-width: 235px;
-    max-width: 235px;
-  }
-}*/
 
 @media (min-width: 992px) {
   .site-menu-main .sub-menu .sub-menu {
@@ -637,7 +618,6 @@ bodt {
 
 @media (min-width: 992px) {
   li.nav-item-has-children:hover>.sub-menu {
-    margin-top: 5px;
     visibility: visible;
     opacity: 1;
     z-index: 99;

@@ -92,7 +92,7 @@
         autoplay: false,
         arrows: false,
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 1000,
         lazyLoad: 'progressive'
       }).slickAnimation();
