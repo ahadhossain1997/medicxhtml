@@ -1818,12 +1818,12 @@ blockquote {
   background-color: var(--heading-color) !important;
 }
 
-.bg-light {
-  background-color: rgba(0, 34, 255, 0.05) !important;
+.bg-white {
+  background-color: var(--white-bg) !important;
 }
 
 .accent-bg {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
 }
 
 /*1.1 layout css*/
@@ -1850,21 +1850,11 @@ header.medicx-header-section.sticky-menu {
 .sticky-menu .medicx-header-top {
   margin-top: -65px;
 }
-@media (max-width: 1199px) {
-  .sticky-menu .medicx-header-top {
-    margin-top: -112px;
-  }
-}
 .sticky-menu .medicx-header-top2 {
   margin-top: -92px;
 }
 .sticky-menu .medicx-header-top3 {
-  margin-top: -81px;
-}
-@media (max-width: 1199px) {
-  .sticky-menu .medicx-header-top3 {
-    margin-top: -115px;
-  }
+  margin-top: -65px;
 }
 
 .white-color {
@@ -1904,20 +1894,13 @@ header.medicx-header-section.sticky-menu {
 }
 
 .medicx-header-bottom {
-  padding: 10px 0;
   position: relative;
   z-index: 1;
-  background: var(--white-color);
 }
-.medicx-header-bottom2 {
-  padding: 10px 0;
-  background: var(--accent-color);
-}
-.medicx-header-bottom3 {
-  padding: 10px 0;
-  position: relative;
-  z-index: 1;
-  background: var(--heading-color);
+@media (max-width: 991px) {
+  .medicx-header-bottom {
+    padding: 15px 0;
+  }
 }
 
 .medicx-header-info-wrap {
@@ -1925,21 +1908,16 @@ header.medicx-header-section.sticky-menu {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1199px) {
-  .medicx-header-info-wrap {
-    display: block;
-    text-align: center;
-  }
-}
-.medicx-header-info-wrap.pl-20 {
-  padding-left: 18px;
-}
 .medicx-header-info-data ul li {
   display: inline-block;
   margin-right: 20px;
   font-size: 16px;
   font-weight: 700;
   color: var(--white-color);
+  margin-right: 20px;
+}
+.medicx-header-info-data ul li:last-child {
+  margin-right: 0;
 }
 .medicx-header-info-data ul li img {
   margin-right: 10px;
@@ -1950,7 +1928,6 @@ header.medicx-header-section.sticky-menu {
   }
 }
 .medicx-header-info-data ul li a {
-  margin-right: 20px;
   color: var(--white-color);
 }
 .medicx-header-info-data ul li a img {
@@ -2037,7 +2014,7 @@ header.medicx-header-section.sticky-menu {
 
 .brand-logo3 {
   padding: 0 50px;
-  top: -82px;
+  top: -86px;
   left: -25%;
   display: flex;
   height: 166px;
@@ -2045,6 +2022,9 @@ header.medicx-header-section.sticky-menu {
   position: absolute;
   transition: all 0.4s;
   background: var(--accent-color);
+}
+.brand-logo3 img {
+  padding-top: 5px;
 }
 @media (max-width: 1700px) {
   .brand-logo3 {
@@ -2102,6 +2082,11 @@ header.medicx-header-section.sticky-menu {
 
 .medicx-textarea img {
   margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .medicx-textarea img {
+    width: 50%;
+  }
 }
 .medicx-textarea p {
   font-size: 18px;
@@ -2437,7 +2422,6 @@ header.medicx-header-section.sticky-menu {
   .medicx-default-btn,
   #medicx-submit-btn {
     position: static;
-    width: 100%;
     justify-content: center;
   }
 }
@@ -3538,24 +3522,31 @@ h1.post__title {
   width: 50px;
   display: inline-flex;
   text-align: center;
-  line-height: 50px;
-  font-size: 21px;
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   margin: 0 5px;
   color: var(--heading-color);
-  border-radius: 50px;
+  border-radius: 100px;
   background: var(--light-bg);
+  border: 1px solid var(--light-color2);
 }
 
 .medicx-navigation a:hover,
 .page-links a:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
+  border: 1px solid var(--accent-color);
+}
+.medicx-navigation a:hover svg path,
+.page-links a:hover svg path {
+  fill: var(--white-color);
 }
 
 .medicx-hero-section {
-  margin-top: 132px;
+  margin-top: 114px;
 }
 @media (max-width: 1199px) {
   .medicx-hero-section {
@@ -4096,6 +4087,15 @@ h1.post__title {
 }
 .medicx-team-wrap h5, .medicx-team-wrap p {
   color: var(--white-color);
+}
+.medicx-team-wrap::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 45px;
+  top: 28px;
+  left: 0;
+  background: var(--white-color);
 }
 .medicx-team-wrap .team-position {
   transition: all 0.4s;
@@ -4923,7 +4923,7 @@ h1.post__title {
 @media (max-width: 575px) {
   .medicx-video-section .medicx-popup-video {
     top: 28%;
-    left: 41%;
+    left: 40%;
     padding: 5px;
   }
 }
@@ -4962,12 +4962,13 @@ h1.post__title {
   .medicx-video-section .play-btn img {
     left: 52%;
     top: 55%;
-    width: 20px;
+    width: 15px;
   }
 }
 @media (max-width: 575px) {
   .medicx-video-section .play-btn img {
-    left: 55%;
+    top: 54%;
+    left: 54%;
   }
 }
 
@@ -5111,7 +5112,7 @@ h1.post__title {
   left: 41%;
   width: 60px;
   height: 60px;
-  z-index: 99;
+  z-index: 1;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -5482,21 +5483,17 @@ h1.post__title {
   justify-content: center;
 }
 
-@media (max-width: 1199px) {
-  .medicx-social-icon-wrap {
-    margin-top: 15px;
-  }
-}
 .medicx-social-icon-img ul li {
   display: inline-block;
+  margin-right: 24px;
 }
 @media (max-width: 767px) {
   .medicx-social-icon-img ul li {
     margin-bottom: 20px;
   }
 }
-.medicx-social-icon-img ul li a {
-  margin-right: 30px;
+.medicx-social-icon-img ul li:last-child {
+  margin-right: 0;
 }
 
 .medicx-slider-section {
@@ -8109,7 +8106,7 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding2 {
-    padding: 100px 0;
+    padding: 90px 0;
   }
 }
 @media (max-width: 767px) {
@@ -8185,12 +8182,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding7 {
-    padding: 100px 0;
+    padding: 90px 0;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding7 {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 
@@ -8199,12 +8196,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding8 {
-    padding: 100px 0 130px;
+    padding: 90px 0 130px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding8 {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 
@@ -8213,12 +8210,12 @@ img.plasicon {
 }
 @media (max-width: 991px) {
   .medicx-section-padding9 {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }
 @media (max-width: 767px) {
   .medicx-section-padding9 {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 }
 
@@ -8727,6 +8724,9 @@ img.plasicon {
   transition: all 0.4s;
   border-radius: 10px;
 }
+.medicx-service-thumb img.service-thumb2 {
+  width: 100%;
+}
 .medicx-service-content-wrap h4 {
   color: var(--white-color);
 }
@@ -8971,6 +8971,11 @@ img.plasicon {
 .medicx-blog-content h5 {
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  .medicx-blog-content h5 {
+    margin-bottom: 20px;
+  }
+}
 .medicx-blog-content h4 {
   margin-bottom: 24px;
 }
@@ -9100,7 +9105,7 @@ img.plasicon {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 15px 18px;
+  padding: 14px 18px;
   background: var(--heading-color);
 }
 .medicx-blog-widgets .medicx-recent-post-item {

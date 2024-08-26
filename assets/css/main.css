@@ -44,7 +44,6 @@ bodt {
   .site-navbar .menu-block-wrapper {
     display: flex !important;
     flex-basis: auto;
-    margin-top: 12px;
   }
 
 }
@@ -400,8 +399,8 @@ bodt {
 
 @media (min-width: 992px) {
   .site-menu-main .nav-link-item {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+    padding-top: 25px !important;
+    padding-bottom: 23px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
@@ -417,7 +416,7 @@ bodt {
   box-shadow: -2px 2px 70px -25px rgb(0 0 0 / 30%);
   position: absolute;
   left: 0;
-  top: 61px;
+  top: 80px;
   margin: 0;
   padding: 12px 0;
   transition: .4s;
@@ -1121,11 +1120,11 @@ bodt {
     padding-top: 20px;
     padding-bottom: 20px;
   } */
-  .site-header--menu-center .menu-block-wrapper {
+  /* .site-header--menu-center .menu-block-wrapper {
     position: absolute !important;
     left: 50%;
     transform: translateX(-50%);
-  }
+  } */
 }
 
 .nav-item-has-children a {
