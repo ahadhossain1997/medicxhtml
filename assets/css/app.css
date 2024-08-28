@@ -4366,104 +4366,6 @@ h1.post__title {
   line-height: 28px;
 }
 
-.medicx-member-skill-wrap2 h4 {
-  margin-bottom: 24px;
-}
-@media (max-width: 991px) {
-  .medicx-member-skill-wrap2 {
-    margin-top: 40px;
-  }
-}
-@media (max-width: 767px) {
-  .medicx-member-skill-wrap2 {
-    margin-top: 30px;
-  }
-}
-.medicx-member-bar2 {
-  margin-bottom: 10px;
-}
-.medicx-member-info2 h6 {
-  text-align: left;
-  color: var(--heading-color);
-}
-.medicx-member-progress-line2 {
-  position: relative;
-  height: 6px;
-  background: rgba(0, 34, 255, 0.05) !important;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-  margin-bottom: 20px;
-}
-@media (max-width: 991px) {
-  .medicx-member-progress-line2 {
-    width: 550px;
-  }
-}
-.medicx-member-progress-line2:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 767px) {
-  .medicx-member-progress-line2 {
-    width: 100%;
-  }
-}
-.medicx-member-progress-line2 h6 {
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--accent-color);
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
-.medicx-member-progress-line2 h6::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  right: 0;
-  top: -14px;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-style: #f0f0f0;
-}
-.medicx-member-progress-line2 h6::after {
-  position: absolute;
-  right: -32px;
-  top: -30px;
-  color: var(--dark-bg);
-  font-size: 20px;
-  font-weight: 700;
-  padding: 1px 8px;
-  border-radius: 3px;
-}
-.medicx-member-progress-line2 .html1 {
-  width: 83%;
-}
-.medicx-member-progress-line2 .html1::after {
-  content: "83%";
-}
-.medicx-member-progress-line2 .html2 {
-  width: 90%;
-}
-.medicx-member-progress-line2 .html2::after {
-  content: "90%";
-}
-.medicx-member-progress-line2 .html3 {
-  width: 75%;
-}
-.medicx-member-progress-line2 .html3::after {
-  content: "75%";
-}
-
-@keyframes animate {
-  100% {
-    transform: scaleX(1);
-  }
-}
 .team-member-content h6 {
   color: var(--heading-color);
 }
@@ -7959,43 +7861,27 @@ img.plasicon {
   margin-bottom: 24px;
 }
 
-@media (max-width: 991px) {
-  .medicx-content-skill-wrap {
-    margin-top: 40px;
-  }
+.medicx-skill-wrap h4 {
+  margin-bottom: 20px;
 }
-@media (max-width: 767px) {
-  .medicx-content-skill-wrap {
-    margin-top: 30px;
-  }
+.medicx-skill-item {
+  margin-bottom: 24px;
 }
-.medicx-content-bar {
-  margin-bottom: 10px;
-}
-.medicx-content-info h6 {
-  text-align: left;
+.medicx-skill-title h6 {
+  margin-bottom: 12px;
   color: var(--heading-color);
 }
-.medicx-content-progress-line {
+.medicx-skill-line {
   position: relative;
-  height: 10px;
-  width: 550px;
-  background: var(--light-color);
+  height: 6px;
+  background: rgba(0, 34, 255, 0.05) !important;
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   margin-bottom: 20px;
 }
-.medicx-content-progress-line:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 767px) {
-  .medicx-content-progress-line {
-    width: 100%;
-  }
-}
-.medicx-content-progress-line h6 {
+.medicx-skill-bar {
   height: 100%;
   position: absolute;
   border-radius: 10px;
@@ -8004,7 +7890,7 @@ img.plasicon {
   background: var(--accent-color);
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
-.medicx-content-progress-line h6::before {
+.medicx-skill-bar::before {
   position: absolute;
   content: "";
   height: 0;
@@ -8016,114 +7902,46 @@ img.plasicon {
   border-right-width: 0px;
   border-top-style: #f0f0f0;
 }
-.medicx-content-progress-line h6::after {
+.medicx-skill-bar::after {
   position: absolute;
   right: -32px;
-  top: -30px;
+  top: -44px;
   color: var(--dark-bg);
   font-size: 20px;
   font-weight: 700;
   padding: 1px 8px;
   border-radius: 3px;
 }
-.medicx-content-progress-line .html {
-  width: 73%;
+
+.bar-one {
+  width: 83%;
 }
-.medicx-content-progress-line .html::after {
-  content: "73%";
+
+.bar-one::after {
+  content: "83%";
 }
-.medicx-content-progress-line .css {
+
+.bar-two {
   width: 90%;
 }
-.medicx-content-progress-line .css::after {
-  content: "90%";
-}
-.medicx-content h3 {
-  margin-bottom: 30px;
-}
-.medicx-content-skill-wrap2 h4 {
-  margin-bottom: 30px;
-}
-@media (max-width: 991px) {
-  .medicx-content-skill-wrap2 {
-    margin-top: 40px;
-  }
-}
-@media (max-width: 767px) {
-  .medicx-content-skill-wrap2 {
-    margin-top: 30px;
-  }
-}
-.medicx-content-bar2 {
-  margin-bottom: 10px;
-}
-.medicx-content-info2 h6 {
-  text-align: left;
-  color: var(--heading-color);
-}
-.medicx-content-progress-line2 {
-  position: relative;
-  height: 10px;
-  width: 550px;
-  background: var(--light-color);
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-  margin-bottom: 20px;
-}
-.medicx-content-progress-line2:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 767px) {
-  .medicx-content-progress-line2 {
-    width: 100%;
-  }
-}
-.medicx-content-progress-line2 h6 {
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--accent-color);
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
-.medicx-content-progress-line2 h6::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  right: 0;
-  top: -14px;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-style: #f0f0f0;
-}
-.medicx-content-progress-line2 h6::after {
-  position: absolute;
-  right: -32px;
-  top: -30px;
-  color: var(--dark-bg);
-  font-size: 20px;
-  font-weight: 700;
-  padding: 1px 8px;
-  border-radius: 3px;
-}
-.medicx-content-progress-line2 .html {
-  width: 73%;
-}
-.medicx-content-progress-line2 .html::after {
-  content: "73%";
-}
-.medicx-content-progress-line2 .css {
-  width: 90%;
-}
-.medicx-content-progress-line2 .css::after {
+
+.bar-two::after {
   content: "90%";
 }
 
+.bar-three {
+  width: 75%;
+}
+
+.bar-three::after {
+  content: "75%";
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
 .medicx-section-padding {
   padding: 130px 0 106px;
 }
@@ -9021,20 +8839,22 @@ img.plasicon {
 }
 .medicx-blog-metav1 ul li {
   display: inline-block;
-  font-size: 18px;
-  line-height: 28px;
-  color: var(--heading-color);
   position: relative;
   padding-left: 30px;
   margin-right: 15px;
 }
-.medicx-blog-metav1 ul li:last-child {
+.medicx-blog-metav1 ul li a {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--heading-color);
+}
+.medicx-blog-metav1 ul li a:last-child {
   margin-right: 0;
 }
-.medicx-blog-metav1 ul li img {
+.medicx-blog-metav1 ul li a img {
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 7px;
 }
 .medicx-blog-metav1v3 {
   margin-top: -40px;
@@ -9157,6 +8977,8 @@ img.plasicon {
 }
 .medicx-blog-widgets .medicx-recent-post-thumb img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .medicx-blog-widgets .medicx-recent-post-data span {
   font-size: 18px;
